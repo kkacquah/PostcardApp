@@ -8,9 +8,9 @@ const Transparent = const Color(0x00000000);
 
 
 //Light Colors for titles
-const EmbarkPurple300 = const Color(0xFF28264B);
-const EmbarkPurple200 = const Color(0xFF4E40B9);
-const EmbarkPurple100 = const Color(0xFFE3DFFF);
+const EmbarkPurple900 = const Color(0xFF28264B);
+const EmbarkPurple100 = const Color(0xFF4E40B9);
+const EmbarkPurple50 = const Color(0xFFE3DFFF);
 
 const EmbarkBrown900 = const Color(0xFF442B2D);
 const EmbarkPink100 = const Color(0xFFF8B9C2);
@@ -52,7 +52,7 @@ class EmbarkTheme {
       stops: [0.0, 1.0],
       colors: [
         // Colors are easy thanks to Flutter's Colors class.
-        _primaryVariant,
+        _secondary.withAlpha(90),
         _secondary,
 
         //transparent white
@@ -63,7 +63,7 @@ class EmbarkTheme {
 
 
 
-final embarkThemePurple = EmbarkTheme(EmbarkPurple300,EmbarkPurple200,EmbarkPurple100);
+final embarkThemePurple = EmbarkTheme(EmbarkPurple900,EmbarkPurple100,EmbarkPurple50);
 final embarkThemePink = EmbarkTheme(EmbarkBrown900,EmbarkPink100,EmbarkPink50);
 final embarkThemeBlue = EmbarkTheme(EmbarkBlue900,EmbarkBlue100,EmbarkBlue50);
 final embarkThemeRed = EmbarkTheme(EmbarkRed900,EmbarkRed100,EmbarkRed50);

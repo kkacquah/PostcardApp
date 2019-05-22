@@ -81,31 +81,31 @@ class LogIn extends StatelessWidget {
                             padding: EdgeInsets.only(top: 120),
                             child: EmbarkButton(
                                 _theme, () => {}, "Log In", false, 10)),
-                        Container(
-                          height: 12,
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Container(color: Colors.white),
-                                Text("OR CONNECT WITH",
-                                    style: TextStyle(
-                                        color: _theme.primary(), fontSize: 12)),
-                                Container(color: Colors.white)
-                              ]),
-                        ),
-                        Container(
-                          height: 70,
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                EmbarkButton(
-                                    _theme, () => {}, "Log In", false, 20),
-                                EmbarkButton(
-                                    _theme, () => {}, "Log In", false, 20)
-                              ]),
-                        )
+//                        Container(
+//                          height: 12,
+//                          child: Row(
+//                              mainAxisAlignment: MainAxisAlignment.center,
+//                              crossAxisAlignment: CrossAxisAlignment.center,
+//                              children: <Widget>[
+//                                Container(color: Colors.white),
+//                                Text("OR CONNECT WITH",
+//                                    style: TextStyle(
+//                                        color: _theme.primary(), fontSize: 12)),
+//                                Container(color: Colors.white)
+//                              ]),
+//                        ),
+//                        Container(
+//                          height: 70,
+//                          child: Row(
+//                              mainAxisAlignment: MainAxisAlignment.center,
+//                              crossAxisAlignment: CrossAxisAlignment.center,
+//                              children: <Widget>[
+//                                EmbarkButton(
+//                                    _theme, () => {}, "Log In", false, 10),
+//                                EmbarkButton(
+//                                    _theme, () => {}, "Log In", false, 10)
+//                              ]),
+//                        )
                       ]))
             ]));
   }
