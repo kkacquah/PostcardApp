@@ -33,9 +33,6 @@ class EmbarkTheme {
     this._primary = primary;
     this._secondary = secondary;
     this._primaryVariant = primaryVariant;
-    this._titleGradient = LinearGradient(
-      colors: <Color>[primaryVariant,EmbarkSurfaceWhite],
-    ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
   }
   Color primary(){
     return this._primary;
@@ -46,8 +43,21 @@ class EmbarkTheme {
   Color primaryVariant(){
     return this._primaryVariant;
   }
-  Shader titleGradient(){
-    return this._titleGradient;
+  LinearGradient backgroundGradient(){
+    return  LinearGradient(
+      // Where the linear gradient begins and ends
+      begin: Alignment.bottomLeft,
+      end: Alignment.topRight,
+      // Add one stop for each color. Stops should increase from 0 to 1
+      stops: [0.0, 1.0],
+      colors: [
+        // Colors are easy thanks to Flutter's Colors class.
+        _primaryVariant,
+        _secondary,
+
+        //transparent white
+      ],
+    );
   }
 }
 

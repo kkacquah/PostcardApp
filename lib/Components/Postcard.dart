@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Icons.dart';
-import 'colors.dart';
+import '../Icons.dart';
+import '../colors.dart';
 
 class PostCardInfo {
   String _timeString;
@@ -29,17 +29,13 @@ class PostCardInfo {
 class Postcard extends StatelessWidget{
   EmbarkTheme _theme;
   PostCardInfo _postcardInfo;
-  double _bottom;
   Size _size;
-
-  Postcard(this._theme, this._postcardInfo, this._bottom, this._size);
+  //TODO ALLOW changing of fontsize
+  Postcard(this._theme, this._postcardInfo);
   Widget build(BuildContext context) {
+    //container wrapps whole screen
     return Container(
-        height: _size.height,
-        width: _size.width,
-        child: Padding(
-            padding: EdgeInsets.only(
-                top: 80.0, bottom: _bottom, left: 10.0, right: 10.0),
+          padding:EdgeInsets.only(left:60, right:60, bottom:70),
             child: Card(
                 child: Container(
                     padding: EdgeInsets.all(8.0),
@@ -48,7 +44,7 @@ class Postcard extends StatelessWidget{
                         Expanded(
                             flex: 1,
                             child: Container(color: _theme.primaryVariant())),
-                        Container(height: 50, color: Colors.white),
+                        Container(height: 40, color: Colors.white),
                       ]),
                       Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -56,7 +52,7 @@ class Postcard extends StatelessWidget{
                             //placing text at the bottom
                             Expanded(flex: 1, child: Container()),
                             Container(
-                                height: 70,
+                                height: 60,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                     // Box decoration takes a gradient
@@ -65,7 +61,7 @@ class Postcard extends StatelessWidget{
                                   begin: Alignment.bottomCenter,
                                   end: Alignment.topCenter,
                                   // Add one stop for each color. Stops should increase from 0 to 1
-                                  stops: [0.71, 1.0],
+                                  stops: [0.75, 1.0],
                                   colors: [
                                     // Colors are easy thanks to Flutter's Colors class.
                                     Colors.white,
@@ -79,15 +75,17 @@ class Postcard extends StatelessWidget{
                                     Text(
                                       _postcardInfo._timeString,
                                       style: TextStyle(
-                                          fontFamily: 'PlayfairDisplayBlack',
-                                          fontSize: 14.0,
+                                          fontFamily: 'PlayfairDisplay',
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 10.0,
                                           color: _theme.secondary()),
                                     ),
                                     Text(
                                       _postcardInfo._title,
                                       style: TextStyle(
-                                          fontFamily: 'PlayfairDisplayBlack',
-                                          fontSize: 26.0,
+                                          fontFamily: 'PlayfairDisplay',
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 24.0,
                                           color: _theme.primary()),
                                     ),
                                     Row(children: <Widget>[
@@ -95,12 +93,12 @@ class Postcard extends StatelessWidget{
                                       Text(
                                         _postcardInfo._locationString,
                                         style: TextStyle(
-                                            fontSize: 12.0, color: EmbarkGray),
+                                            fontSize: 10.0, color: EmbarkGray),
                                       )
                                     ])
                                   ],
                                 ))
                           ])
-                    ])))));
+                    ]))));
   }
 }

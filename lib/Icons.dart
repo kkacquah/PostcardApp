@@ -4,5 +4,5 @@ import 'colors.dart';
 final locationOn = Icon(
   Icons.location_on,
   color: EmbarkGray,
-  size: 14.0,
+  size: 10.0,
 );
