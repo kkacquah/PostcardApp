@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "477625911020",
+    "firebase_url": "https://trusty-wares-240914.firebaseio.com",
+    "project_id": "trusty-wares-240914",
+    "storage_bucket": "trusty-wares-240914.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477625911020:android:3c205084504b0861",
+        "android_client_info": {
+          "package_name": "com.kenacquah.postcardapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477625911020-997gjmbm2f8gk6lnh3tq7t00i9o2oa19.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kenacquah.postcardapp",
+            "certificate_hash": "87e708454fe6e97d0d245eb965bf947b027115a8"
+          }
+        },
+        {
+          "client_id": "477625911020-241knthgjd5gq7tq4bmifp06kouje22o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPjtIDmF-EFdN7ucFR2ZwxjhSt9kjaqgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477625911020-241knthgjd5gq7tq4bmifp06kouje22o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

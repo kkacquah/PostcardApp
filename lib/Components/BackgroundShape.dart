@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../colors.dart';
+import 'package:embark/Styles/Colors.dart';
 
 class Background extends StatelessWidget {
 
@@ -16,7 +16,6 @@ class Background extends StatelessWidget {
 }
 
 class BackgroundPainter extends CustomPainter {
-  EmbarkTheme _theme;
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint();

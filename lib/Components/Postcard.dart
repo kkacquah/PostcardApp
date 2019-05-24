@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Icons.dart';
-import '../colors.dart';
+import 'package:embark/Styles/Icons.dart';
+import 'package:embark/Styles/Colors.dart';
 
 class PostCardInfo {
   String _timeString;
