@@ -15,11 +15,48 @@
       },
       "oauth_client": [
         {
-          "client_id": "477625911020-997gjmbm2f8gk6lnh3tq7t00i9o2oa19.apps.googleusercontent.com",
+          "client_id": "477625911020-r0omn3isbbf5hijivp04pvjrqtpergbr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.kenacquah.postcardapp",
-            "certificate_hash": "87e708454fe6e97d0d245eb965bf947b027115a8"
+            "certificate_hash": "dc9e771ed5174f1be7640678e69b3f6ccd872a53"
+          }
+        },
+        {
+          "client_id": "477625911020-241knthgjd5gq7tq4bmifp06kouje22o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPjtIDmF-EFdN7ucFR2ZwxjhSt9kjaqgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477625911020-241knthgjd5gq7tq4bmifp06kouje22o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477625911020:android:7757d25aeae1eea5",
+        "android_client_info": {
+          "package_name": "com.kenacquah.postcardapp.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477625911020-2qo01g5cpu21br3ktbtvmck67ia1m3d8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kenacquah.postcardapp.debug",
+            "certificate_hash": "dc9e771ed5174f1be7640678e69b3f6ccd872a53"
           }
         },
         {

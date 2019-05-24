@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Components/Button.dart';
 import 'package:embark/Components/BackgroundShape.dart';
-import 'package:embark/Pages/HomePage.dart';
-import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
+import 'package:embark/Pages/authentication.dart';
 import 'package:embark/Styles/Icons.dart';
 
 class LogIn extends StatelessWidget {
@@ -60,31 +59,40 @@ class LogIn extends StatelessWidget {
                                   ),
                                   child: Column(children: <Widget>[
                                     Container(
-                                        margin: EdgeInsets.symmetric(vertical: 10),
+                                        margin:
+                                            EdgeInsets.symmetric(vertical: 10),
                                         child: TextField(
                                             autofocus: true,
                                             decoration: InputDecoration(
                                               labelText: "Username",
                                             ))),
                                     Container(
-                                        margin: EdgeInsets.symmetric(vertical: 10),
-                                        child:TextField(
-                                        obscureText: true,
-                                        autofocus: true,
-                                        decoration: InputDecoration(
-                                          labelText: "Password",
-                                        ))),
+                                        margin:
+                                            EdgeInsets.symmetric(vertical: 10),
+                                        child: TextField(
+                                            obscureText: true,
+                                            autofocus: true,
+                                            decoration: InputDecoration(
+                                              labelText: "Password",
+                                            ))),
                                     Container(
-                                      alignment: Alignment.centerRight,
-                                        child:InkWell(
+                                        alignment: Alignment.centerRight,
+                                        child: InkWell(
                                           child: new Text("Forgot Password?"),
-                                        )
-
-                                    )
+                                        ))
                                   ])))
                         ])),
-                    EmbarkButton(
-                        _theme, () => {}, "Log In", false, EdgeInsets.all(0)),
+                    StreamBuilder(
+                        stream: authService.user,
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return EmbarkButton(_theme, () => {}, "Log Out",
+                                false, EdgeInsets.all(0));
+                          } else {
+                            return EmbarkButton(_theme, () => {}, "Log In",
+                                false, EdgeInsets.all(0));
+                          }
+                        }),
                     Container(
                       height: 50,
                       padding:
@@ -113,32 +121,23 @@ class LogIn extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            EmbarkIconButton(facebookTheme, () => {}, " Facebook",
-                                true, EdgeInsets.symmetric(horizontal: 15),facebookIcon),
-                            EmbarkIconButton(googleTheme, () => {}, " Google", true,
-                                EdgeInsets.symmetric(horizontal: 15),googleIcon)
+                            EmbarkIconButton(
+                                facebookTheme,
+                                () => authService.googleSignIn(),
+                                " Facebook",
+                                true,
+                                EdgeInsets.symmetric(horizontal: 15),
+                                facebookIcon),
+                            EmbarkIconButton(
+                                googleTheme,
+                                () => authService.googleSignIn(),
+                                " Google",
+                                true,
+                                EdgeInsets.symmetric(horizontal: 15),
+                                googleIcon)
                           ]),
                     )
                   ]))
             ]));
   }
-}
-
-class LinePainter extends CustomPainter {
-  EmbarkTheme _theme;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint();
-    // set the color property of the paint
-    paint.color = EmbarkGray;
-    var path = Path();
-    path.moveTo(0, size.height / 2);
-    path.lineTo(size.width, size.height / 2);
-    canvas.drawPath(path, paint);
-    //TODO: DRAW SHADOW
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
