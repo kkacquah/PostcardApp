@@ -64,7 +64,7 @@ class LogIn extends StatelessWidget {
                                         child: TextField(
                                             autofocus: true,
                                             decoration: InputDecoration(
-                                              labelText: "Username",
+                                              labelText: "Email",
                                             ))),
                                     Container(
                                         margin:
@@ -83,10 +83,11 @@ class LogIn extends StatelessWidget {
                                   ])))
                         ])),
                     StreamBuilder(
-                        stream: authService.user,
+                        stream: authServiceGoogle.user,
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
-                            return EmbarkButton(_theme, () => {}, "Log Out",
+
+                            return EmbarkButton(_theme, () => {authServiceGoogle.signOut()}, "Log Out",
                                 false, EdgeInsets.all(0));
                           } else {
                             return EmbarkButton(_theme, () => {}, "Log In",
@@ -123,14 +124,14 @@ class LogIn extends StatelessWidget {
                           children: <Widget>[
                             EmbarkIconButton(
                                 facebookTheme,
-                                () => authService.googleSignIn(),
+                                () => authServiceFacebook.facebookSignIn(),
                                 " Facebook",
                                 true,
                                 EdgeInsets.symmetric(horizontal: 15),
                                 facebookIcon),
                             EmbarkIconButton(
                                 googleTheme,
-                                () => authService.googleSignIn(),
+                                () => authServiceGoogle.googleSignIn(),
                                 " Google",
                                 true,
                                 EdgeInsets.symmetric(horizontal: 15),

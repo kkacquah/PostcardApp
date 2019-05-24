@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">"Postcard App"</string>
+    <string name="facebook_app_id">334654947252327</string>
+    <string name="fb_login_protocol_scheme">fb334654947252327</string>
+
+</resources>
