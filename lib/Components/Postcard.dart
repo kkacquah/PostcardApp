@@ -34,9 +34,8 @@ class Postcard extends StatelessWidget{
   Postcard(this._theme, this._postcardInfo);
   Widget build(BuildContext context) {
     //container wrapps whole screen
-    return Container(
-          padding:EdgeInsets.only(left:60, right:60, bottom:70),
-            child: Card(
+    //TODO: FIX SO OUTSIDE SETTLES PADDING
+    return Card(
                 child: Container(
                     padding: EdgeInsets.all(8.0),
                     child: Stack(children: <Widget>[
@@ -93,12 +92,13 @@ class Postcard extends StatelessWidget{
                                       Text(
                                         _postcardInfo._locationString,
                                         style: TextStyle(
+                                            fontFamily: 'Montserrat',
                                             fontSize: 10.0, color: EmbarkGray),
                                       )
                                     ])
                                   ],
                                 ))
                           ])
-                    ]))));
+                    ])));
   }
 }

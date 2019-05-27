@@ -54,12 +54,19 @@ flutter:
     - family:  BrandIcons
       fonts:
         - asset: fonts/BrandIcons.ttf
+    - family: Montserrat
+      fonts:
+        - asset: fonts/montserrat/Montserrat-Medium.ttf
+        - asset: fonts/montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: fonts/montserrat/Montserrat-Black.ttf
+          weight: 900
     - family: PlayfairDisplay
       fonts:
-        - asset: fonts/PlayfairDisplay-Regular.ttf
-        - asset: fonts/PlayfairDisplay-Bold.ttf
+        - asset: fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf
+        - asset: fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf
           weight: 700
-        - asset: fonts/PlayfairDisplay-Black.ttf
+        - asset: fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf
           weight: 900
   assets:
     - images/1.jpg

@@ -4,12 +4,24 @@ import 'package:embark/Components/Button.dart';
 import 'package:embark/Components/BackgroundShape.dart';
 import 'package:embark/Pages/authentication.dart';
 import 'package:embark/Styles/Icons.dart';
-
-class LogIn extends StatelessWidget {
+class LogIn extends StatefulWidget {
   final EmbarkTheme _theme;
+  LogIn(this._theme) ;
 
-  LogIn(this._theme);
-
+  @override
+  _LogInState createState() => _LogInState();
+}
+class _LogInState extends State<LogIn> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  _LogInState();
+  @override
+  void dispose() {
+    // Clean up the controller when the Widget is disposed
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 //        TODO Get rid of hardcoded phone values
@@ -23,7 +35,7 @@ class LogIn extends StatelessWidget {
             children: <Widget>[
               Container(
                   decoration:
-                      BoxDecoration(gradient: _theme.backgroundGradient())),
+                      BoxDecoration(gradient: widget._theme.backgroundGradient())),
               Background(),
               Container(
                   child: Column(
@@ -47,9 +59,9 @@ class LogIn extends StatelessWidget {
                           Container(
                               child: Theme(
                                   data: ThemeData(
-                                    primaryColor: _theme.primary(),
+                                    primaryColor: widget._theme.primary(),
                                     hintColor: Colors.white,
-                                    cursorColor: _theme.primary(),
+                                    cursorColor: widget._theme.primary(),
                                     inputDecorationTheme: InputDecorationTheme(
                                         border: UnderlineInputBorder(),
                                         enabledBorder: UnderlineInputBorder(
@@ -62,6 +74,8 @@ class LogIn extends StatelessWidget {
                                         margin:
                                             EdgeInsets.symmetric(vertical: 10),
                                         child: TextField(
+                                            controller: emailController,
+                                            keyboardType: TextInputType.emailAddress,
                                             autofocus: true,
                                             decoration: InputDecoration(
                                               labelText: "Email",
@@ -70,6 +84,7 @@ class LogIn extends StatelessWidget {
                                         margin:
                                             EdgeInsets.symmetric(vertical: 10),
                                         child: TextField(
+                                            controller: passwordController,
                                             obscureText: true,
                                             autofocus: true,
                                             decoration: InputDecoration(
@@ -82,18 +97,8 @@ class LogIn extends StatelessWidget {
                                         ))
                                   ])))
                         ])),
-                    StreamBuilder(
-                        stream: authServiceGoogle.user,
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-
-                            return EmbarkButton(_theme, () => {authServiceGoogle.signOut()}, "Log Out",
-                                false, EdgeInsets.all(0));
-                          } else {
-                            return EmbarkButton(_theme, () => {}, "Log In",
-                                false, EdgeInsets.all(0));
-                          }
-                        }),
+                    EmbarkButton(widget._theme, () => authServiceEmailAndPassword.signIn(emailController.text, passwordController.text), "Log In",
+                                false, EdgeInsets.all(0)),
                     Container(
                       height: 50,
                       padding:
@@ -109,7 +114,7 @@ class LogIn extends StatelessWidget {
                                 margin: EdgeInsets.symmetric(horizontal: 20),
                                 child: Text("OR CONNECT WITH",
                                     style: TextStyle(
-                                        color: _theme.primary(),
+                                        color: widget._theme.primary(),
                                         fontSize: 12))),
                             Expanded(
                                 flex: 1,

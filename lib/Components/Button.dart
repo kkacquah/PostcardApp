@@ -151,7 +151,7 @@ class EmbarkButtonGradient extends StatelessWidget {
                   splashColor: _theme.primary(),
                   child: Text('Sign Up',
                       style: TextStyle(
-                          fontWeight: FontWeight.w300,
+                          fontFamily: 'Montserrat',
                           fontSize: 20,
                           foreground: Paint()
                             ..shader = _theme
@@ -176,8 +176,7 @@ class EmbarkButtonGradient extends StatelessWidget {
               color: Colors.transparent,
               child: Text(this._text,
                   style: TextStyle(
-                      fontFamily: 'PlayfairDisplay',
-                      fontWeight: FontWeight.w300,
+                      fontFamily: 'Montserrat',
                       fontSize: 20,
                       color: EmbarkSurfaceWhite))));
     }

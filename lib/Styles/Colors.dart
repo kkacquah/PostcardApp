@@ -50,13 +50,13 @@ class EmbarkTheme {
   LinearGradient backgroundGradient(){
     return  LinearGradient(
       // Where the linear gradient begins and ends
-      begin: Alignment.bottomLeft,
-      end: Alignment.topRight,
+      begin: Alignment.bottomCenter,
+      end: Alignment.topCenter,
       // Add one stop for each color. Stops should increase from 0 to 1
-      stops: [0.0, 1.0],
+      stops: [1/4, 1.0],
       colors: [
         // Colors are easy thanks to Flutter's Colors class.
-        _secondary.withAlpha(90),
+        Colors.white,
         _secondary,
 
         //transparent white
