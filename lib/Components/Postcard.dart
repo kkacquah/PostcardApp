@@ -37,7 +37,6 @@ class Postcard extends StatelessWidget {
 
   Widget build(BuildContext context) {
     //container wrapps whole screen
-    //TODO: FIX SO OUTSIDE SETTLES PADDING
     return Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(0),
