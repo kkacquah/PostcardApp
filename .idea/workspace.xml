@@ -9,28 +9,48 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e14628-8faf-4c68-a6d6-509e73caeda9" name="Default Changelist" comment="">
+    <list default="true" id="85e14628-8faf-4c68-a6d6-509e73caeda9" name="Default Changelist" comment="google and facebook commit">
+      <change afterPath="$PROJECT_DIR$/lib/Styles/Themes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/PlayfairDisplay-Black.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/PlayfairDisplay-BlackItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/PlayfairDisplay-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/PlayfairDisplay-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/PlayfairDisplay-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/PlayfairDisplay-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Black.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-Black.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-BlackItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-BlackItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-ExtraBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-ExtraLight.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-LightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-LightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-MediumItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-MediumItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-SemiBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Thin.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-Thin.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ThinItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/Montserrat-ThinItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/Montserrat/OFL.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Components/Button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/Button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Components/Input.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Components/Postcard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/Postcard.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/HomePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Pages/LogIn.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/LogIn.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Pages/SignUp.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/SignUp.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Pages/authentication.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/authentication.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/LogIn.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/SignUp.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/authentication.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Services/authentication.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Pages/homePageUtil.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/homePageUtil.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Styles/Colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Styles/Colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
@@ -46,10 +66,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Components/Button.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/Components/Postcard.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="94" column="67" selection-start-line="94" selection-start-column="67" selection-end-line="94" selection-end-column="67" />
+            <state relative-caret-position="228">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -60,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Pages/homePageUtil.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+            <state relative-caret-position="204">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -70,25 +102,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Pages/LogIn.dart">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-136">
+              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Components/Button.dart">
+        <entry file="file://$PROJECT_DIR$/lib/exampleData.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="178" column="45" selection-start-line="178" selection-start-column="45" selection-end-line="178" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1085">
+              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -96,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Pages/HomePage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="-408">
+              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -105,33 +140,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Styles/Themes.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="65" column="62" selection-end-line="105" />
+            <state relative-caret-position="373">
+              <caret line="43" column="84" selection-start-line="43" selection-start-column="84" selection-end-line="43" selection-end-column="84" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-Black.ttf">
-          <provider selected="true" editor-type-id="fontseditor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-Italic.ttf">
-          <provider selected="true" editor-type-id="fontseditor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-MediumItalic.ttf">
-          <provider selected="true" editor-type-id="fontseditor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-Medium.ttf">
-          <provider selected="true" editor-type-id="fontseditor" />
+        <entry file="file://$PROJECT_DIR$/lib/Styles/Icons.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -139,8 +169,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dart File" />
         <option value="valueResourceFile" />
+        <option value="Dart File" />
       </list>
     </option>
   </component>
@@ -170,6 +200,8 @@
       <find>welcom</find>
       <find>embark</find>
       <find>mont</find>
+      <find>padding</find>
+      <find>R</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,7 +229,6 @@
         <option value="$PROJECT_DIR$/lib/Components/BackgroundShape.dart" />
         <option value="$PROJECT_DIR$/lib/colors.dart" />
         <option value="$PROJECT_DIR$/lib/homePage.dart" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/logIn.dart" />
         <option value="$PROJECT_DIR$/lib/Icons.dart" />
         <option value="$PROJECT_DIR$/lib/Styles/Icons.dart" />
@@ -212,15 +243,17 @@
         <option value="$PROJECT_DIR$/lib/Pages/authentication.dart" />
         <option value="$PROJECT_DIR$/lib/Pages/SignUp.dart" />
         <option value="$PROJECT_DIR$/lib/Styles/Colors.dart" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/Components/Button.dart" />
-        <option value="$PROJECT_DIR$/lib/Pages/HomePage.dart" />
-        <option value="$PROJECT_DIR$/lib/Pages/homePageUtil.dart" />
-        <option value="$PROJECT_DIR$/lib/Components/Postcard.dart" />
+        <option value="$PROJECT_DIR$/lib/Styles/Themes.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/Pages/homePageUtil.dart" />
+        <option value="$PROJECT_DIR$/lib/Pages/HomePage.dart" />
+        <option value="$PROJECT_DIR$/lib/Components/Postcard.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-15" />
     <option name="width" value="1948" />
     <option name="height" value="2075" />
@@ -240,58 +273,31 @@
             <path>
               <item name="embark" type="b2602c69:ProjectViewProjectNode" />
               <item name="embark" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="embark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="embark" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="embark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="embark" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="embark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="embark" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="embark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="embark" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="embark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="embark" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="values" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="embark" type="b2602c69:ProjectViewProjectNode" />
               <item name="embark" type="462c0819:PsiDirectoryNode" />
               <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="Montserrat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="embark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="embark" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="MontserratAlternates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="embark" type="b2602c69:ProjectViewProjectNode" />
               <item name="embark" type="462c0819:PsiDirectoryNode" />
               <item name="fonts" type="462c0819:PsiDirectoryNode" />
               <item name="PlayfairDisplay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="embark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="embark" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="RobotoMono" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="embark" type="b2602c69:ProjectViewProjectNode" />
@@ -325,9 +331,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,18 +344,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aquar\embark\lib\Services" />
+      <recent name="C:\Users\aquar\embark\lib\Pages" />
+      <recent name="C:\Users\aquar\embark\lib\Styles" />
+      <recent name="C:\Users\aquar\embark\lib\Components" />
+      <recent name="C:\Users\aquar\embark" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\aquar\embark\fonts\PlayfairDisplay" />
       <recent name="C:\Users\aquar\embark\android\app\src\main\res\mipmap-xxxhdpi" />
       <recent name="C:\Users\aquar\embark\android\app\src\main\res\mipmap-xxhdpi" />
       <recent name="C:\Users\aquar\embark\android\app\src\main\res\mipmap-xhdpi" />
       <recent name="C:\Users\aquar\embark\android\app\src\main\res\mipmap-mdpi" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\aquar\embark\lib\Pages" />
-      <recent name="C:\Users\aquar\embark\lib\Styles" />
-      <recent name="C:\Users\aquar\embark\lib\Components" />
-      <recent name="C:\Users\aquar\embark" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -407,29 +414,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="0" width="779" height="830" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8987854" visible="true" weight="0.12608987" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8584906" visible="true" weight="0.34535366" />
       <window_info id="Captures" order="1" sideWeight="0.10121457" side_tool="true" weight="0.21327968" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info id="Build Variants" order="5" side_tool="true" />
+      <window_info id="Build Variants" order="5" sideWeight="0.14150943" side_tool="true" visible="true" weight="0.34535366" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.4988764" weight="0.47783932" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.54031116" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.437058" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="4" />
       <window_info anchor="bottom" id="Logcat" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.38142857" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3437058" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.38048092" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.24285714" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32956153" />
+      <window_info anchor="bottom" id="Find" order="11" weight="0.32956153" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.041551247" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -521,7 +529,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/main.dart</url>
-          <line>6</line>
+          <line>5</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -552,13 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="168" column="44" selection-start-line="168" selection-start-column="34" selection-end-line="168" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Components/Input.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -618,16 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Styles/Icons.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/icon.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -680,46 +671,29 @@
     <entry file="file://$PROJECT_DIR$/pubspec.lock">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/exampleData.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Pages/SignUp.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/Pages/LogIn.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/Services/authentication.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Pages/authentication.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2474">
-          <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+        <state relative-caret-position="1343">
+          <caret line="85" column="3" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Pages/SignUp.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/fonts/Montserrat/Montserrat-Black.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Styles/Colors.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/fonts/Montserrat/Montserrat-Italic.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fonts/Montserrat/Montserrat-MediumItalic.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fonts/Montserrat/Montserrat-Medium.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Components/BackgroundShape.dart">
       <provider selected="true" editor-type-id="text-editor">
@@ -731,22 +705,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-Black.ttf">
+    <entry file="file://$PROJECT_DIR$/lib/Components/Input.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="48" selection-start-column="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Styles/Colors.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fonts/RobotoMono/RobotoMono-Bold.ttf">
       <provider selected="true" editor-type-id="fontseditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-Italic.ttf">
+    <entry file="file://$PROJECT_DIR$/fonts/RobotoMono/RobotoMono-BoldItalic.ttf">
       <provider selected="true" editor-type-id="fontseditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-MediumItalic.ttf">
+    <entry file="file://$PROJECT_DIR$/fonts/RobotoMono/RobotoMono-Italic.ttf">
       <provider selected="true" editor-type-id="fontseditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fonts/montserrat/Montserrat-Medium.ttf">
-      <provider selected="true" editor-type-id="fontseditor" />
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1085">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/exampleData.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Styles/Themes.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="43" column="84" selection-start-line="43" selection-start-column="84" selection-end-line="43" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Styles/Icons.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Components/Button.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="178" column="45" selection-start-line="178" selection-start-column="45" selection-end-line="178" selection-end-column="45" />
+        <state relative-caret-position="261">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/scroll_activity.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Pages/homePageUtil.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -755,28 +798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Pages/HomePage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Pages/LogIn.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Pages/homePageUtil.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+        <state relative-caret-position="-408">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -785,18 +808,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Components/Postcard.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="94" column="67" selection-start-line="94" selection-start-column="67" selection-end-line="94" selection-end-column="67" />
+        <state relative-caret-position="228">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="65" column="62" selection-end-line="105" />
         </state>
       </provider>
     </entry>

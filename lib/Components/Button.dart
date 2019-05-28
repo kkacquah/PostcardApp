@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:embark/Styles/Themes.dart';
 import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Styles/Icons.dart';
 
@@ -19,7 +20,7 @@ class EmbarkIconButton extends StatelessWidget {
     if (_outline) {
       return Container(
           margin: this._margin,
-          width: size.width * (3 / 8),
+          width: size.width * 0.4,
           height: 50,
           child: OutlineButton(
               shape: new RoundedRectangleBorder(

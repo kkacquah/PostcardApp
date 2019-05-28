@@ -56,10 +56,10 @@ flutter:
         - asset: fonts/BrandIcons.ttf
     - family: Montserrat
       fonts:
-        - asset: fonts/montserrat/Montserrat-Medium.ttf
-        - asset: fonts/montserrat/Montserrat-Bold.ttf
+        - asset: fonts/Montserrat/Montserrat-Medium.ttf
+        - asset: fonts/Montserrat/Montserrat-Bold.ttf
           weight: 700
-        - asset: fonts/montserrat/Montserrat-Black.ttf
+        - asset: fonts/Montserrat/Montserrat-Black.ttf
           weight: 900
     - family: PlayfairDisplay
       fonts:
@@ -68,6 +68,28 @@ flutter:
           weight: 700
         - asset: fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf
           weight: 900
+    - family: MontserratAlternates
+      fonts:
+        - asset: fonts/MontserratAlternates/MontserratAlternates-Medium.ttf
+        - asset: fonts/MontserratAlternates/MontserratAlternates-Bold.ttf
+          weight: 700
+        - asset: fonts/MontserratAlternates/MontserratAlternates-Black.ttf
+          weight: 900
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans/OpenSans-Regular.ttf
+        - asset: fonts/OpenSans/OpenSans-Bold.ttf
+          weight: 700
+        - asset: fonts/OpenSans/OpenSans-ExtraBold.ttf
+          weight: 900
+    - family: RobotoMono
+      fonts:
+       - asset: fonts/RobotoMono/RobotoMono-Regular.ttf
+       - asset: fonts/RobotoMono/RobotoMono-Medium.ttf
+         weight: 700
+       - asset: fonts/RobotoMono/RobotoMono-Bold.ttf
+         weight: 900
+
   assets:
     - images/1.jpg
     - images/2.jpg

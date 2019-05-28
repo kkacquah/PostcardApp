@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Styles/Colors.dart';
+import 'package:embark/Styles/Themes.dart';
 import 'homePageUtil.dart';
-import 'package:embark/Components/BackgroundShape.dart';
-import 'SignUp.dart';
 import 'package:embark/Components/Button.dart';
-import 'LogIn.dart';
-import 'package:embark/Pages/authentication.dart';
+import 'package:embark/Services/authentication.dart';
 import 'package:embark/Styles/Icons.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 //Render home Screen
-class BackgroundImage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   List<EmbarkTheme> _themes;
 
   //Set Using Themes
-  BackgroundImage(List<EmbarkTheme> themes) {
+  HomePage(List<EmbarkTheme> themes) {
     this._themes = themes;
   }
 
   @override
-  _BackgroundImageState createState() => _BackgroundImageState();
+  __HomePageState createState() => __HomePageState();
 }
 
-class _BackgroundImageState extends State<BackgroundImage> {
+class __HomePageState extends State<HomePage> {
   PageController _backgroundController =
       new PageController(); // make seperate controllers
   PageController _cardController = new PageController(); // for each scrollables
@@ -32,18 +29,6 @@ class _BackgroundImageState extends State<BackgroundImage> {
 
   @override
   Widget build(BuildContext context) {
-    Function login = () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => LogIn(widget._themes[_card])),
-      );
-    };
-    Function signup = () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => SignUp(widget._themes[_card])),
-      );
-    };
     Size size = MediaQuery.of(context).size;
     PageList pages = PageList(widget._themes, size);
     return Scaffold(
@@ -66,19 +51,23 @@ class _BackgroundImageState extends State<BackgroundImage> {
                   children: <Widget>[
                     //title 1/8
                     Container(
-                        height: size.height / 8,
+                        height: size.height / 6,
                         child: Align(
-                            alignment: Alignment.center,
+                            alignment: Alignment.topCenter,
                             child: AnimatedOpacity(
                                 duration:
                                     Duration(milliseconds: AnimationDuration),
                                 opacity: _titleOpacity,
-                                child: Column(children: <Widget>[
+                                child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: <Widget>[
                                   Text(
                                     'HelloFrom',
                                     textAlign: TextAlign.center,
                                     style: new TextStyle(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily:
+                                            widget._themes[_card].fontFamily(),
                                         fontWeight: FontWeight.w700,
                                         fontSize: 36.0,
                                         color: EmbarkSurfaceWhite),
@@ -87,7 +76,8 @@ class _BackgroundImageState extends State<BackgroundImage> {
                                     'Share your journeys with the world.',
                                     textAlign: TextAlign.center,
                                     style: new TextStyle(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily:
+                                            widget._themes[_card].fontFamily(),
                                         fontWeight: FontWeight.w200,
                                         fontSize: 20.0,
                                         color: EmbarkSurfaceWhite),
@@ -108,13 +98,6 @@ class _BackgroundImageState extends State<BackgroundImage> {
                         duration: Duration(milliseconds: AnimationDuration),
                         opacity: _titleOpacity,
                         child: Column(children: <Widget>[
-//                          Container(
-//                            //Card Scroller 1/8 - 5/8
-//                            //TODO: FIX OLD ANIMATION
-//                            padding:EdgeInsets.only(left:60, right:60, bottom:70),
-//                            height: size.height / 2,
-//                            child: pages.getCard(_card)
-//                          ),
                           Container(
                             height: 50,
                             padding: EdgeInsets.symmetric(
@@ -134,7 +117,7 @@ class _BackgroundImageState extends State<BackgroundImage> {
                                           EdgeInsets.symmetric(horizontal: 10),
                                       child: Text("CONTINUE WITH",
                                           style: TextStyle(
-                                            fontFamily: "Montserrat",
+                                              fontFamily: "Montserrat",
                                               fontWeight: FontWeight.w500,
                                               color: widget._themes[_card]
                                                   .primary(),
@@ -176,15 +159,21 @@ class _BackgroundImageState extends State<BackgroundImage> {
             onNotification: (ScrollNotification scrollInfo) {
               // HEY!! LISTEN!!
               // this will set controller1's offset the same as controller2's
+              // do nothing on overscroll
+
+              if (scrollInfo is OverscrollNotification ||
+                  scrollInfo.metrics.outOfRange ||(_cardController.offset >= _cardController.position.maxScrollExtent)) {
+                return;
+              }
               _backgroundController.jumpTo(_cardController.offset);
               double normalizedOffsetTwoPlaces = roundDecimal(
-                  2, (_backgroundController.offset) / (size.width));
+                  2, (_cardController.offset) / (size.width));
               int cardNumber =
                   //epsilon to allow for rounding errors
                   normalizedOffsetTwoPlaces.floor();
               double opacityTwoPlaces = roundDecimal(
                   2,
-                  (_backgroundController.offset - size.width * cardNumber) /
+                  (_cardController.offset - size.width * cardNumber) /
                       (size.width));
               double progress = (1 - opacityTwoPlaces);
               if (progress < 0.99) {
