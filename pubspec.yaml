@@ -92,7 +92,6 @@ flutter:
 
   assets:
     - images/1.jpg
-    - images/2.jpg
 
 
   # To add assets to your application, add an assets section, like this:
