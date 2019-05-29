@@ -3,6 +3,7 @@ import 'package:embark/services/authentication.dart';
 import 'PostcardInfo.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:embark/Components/LoginPostcard.dart';
+import 'package:embark/Styles/Themes.dart';
 
 class Profile {
   // Shared State for Widgets
@@ -38,14 +39,14 @@ class Profile {
         .document(user.uid)
         .collection('myPostcards')
         .getDocuments();
-    this.myPostcards = this._queryPostcards(myPostcardsQuery);
+    this.myPostcards = await this._queryPostcards(myPostcardsQuery);
     //get saved postcards save on device
     QuerySnapshot savedPostcardsQuery = await _db
         .collection('users')
         .document(user.uid)
         .collection('myPostcards')
         .getDocuments();
-    this.savedPostcards = this._queryPostcards(savedPostcardsQuery);
+    this.savedPostcards = await this._queryPostcards(savedPostcardsQuery);
   }
 
   facebookSignIn() async {
@@ -59,23 +60,48 @@ class Profile {
     await _intializeUser(user);
   }
 
-  List<PostcardInfo> _queryPostcards(QuerySnapshot postcardsQuery) {
+  Future<List<PostcardInfo>> _queryPostcards(QuerySnapshot postcardsQuery) async {
     List<DocumentSnapshot> postcardDocuments = postcardsQuery.documents;
-    print("got here");
-    print(postcardDocuments);
-    List<PostcardInfo> postcards = postcardDocuments.map((
-        DocumentSnapshot docSnapshot) {
+    List<String> postcardIDs = postcardDocuments.map((
+        DocumentSnapshot docSnapshot)  {
       //TODO: IF Exists
       if (docSnapshot.data == null) {
         return null;
       }
-      print(docSnapshot.data['aspectRatio']);
-      return PostcardInfo(docSnapshot.data['title'], docSnapshot.documentID,
-          docSnapshot.data['photoUrl'], docSnapshot.data['locationString'],docSnapshot.data['fontFamily'],docSnapshot.data['aspectRatio']);
-    }).where((info) => info != null).toList();
-    return postcards;
+      return docSnapshot.documentID;
+    }).toList();
+    print(postcardIDs);
+     QuerySnapshot postcardDocumentFromIDs = await _db
+        .collection('postcards')
+        .getDocuments();
+    return postcardDocumentFromIDs.documents.where((
+        //Only get document snapshots where data != null and the documentID is a postcardid
+        DocumentSnapshot docSnapshot)  {
+
+      if (docSnapshot.data == null) {
+        return false;
+      }
+      return postcardIDs.contains(docSnapshot.documentID);
+    }).map((DocumentSnapshot postcardDocument){
+      //Map document snapshots into the postcardDocuments
+      return PostcardInfo(
+          postcardDocument.data['title'], postcardDocument.documentID,
+          postcardDocument.data['photoUrl'],
+          postcardDocument.data['locationString'],
+          EmbarkTheme.fromMap(Map<String, dynamic>.from(postcardDocument.data['theme'])),
+          postcardDocument.data['aspectRatio']);
+    }).toList();
   }
 
+  Future<PostcardInfo> _postCardFromPostcardId(String documentID) async {
+    DocumentSnapshot postcardDocument;
+    print("setting");
+    await _db
+        .collection('postcards')
+        .document(documentID).get().then((value) => {print(value)});
+//    print(postcardDocument);
+
+  }
 
   void signOut() {
     _authService.signOut();

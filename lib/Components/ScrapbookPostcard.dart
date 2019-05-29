@@ -35,9 +35,9 @@ class ScrapbookPostcard extends StatelessWidget {
               ),
               BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 0.7, sigmaY: 0.7),
-                  child: new Container(
+                  child:  Container(
                     decoration:
-                        new BoxDecoration(gradient: LinearGradient(colors: null)),
+                        new BoxDecoration(),
                   ))
             ]))));
   }

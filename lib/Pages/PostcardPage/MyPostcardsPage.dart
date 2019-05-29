@@ -16,7 +16,6 @@ class __MyPostcardsPageState extends State<MyPostcardsPage> {
 
   @override
   Widget build(BuildContext context) {
-    print(profile.myPostcards[0]);
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar:EmbarkAppBar(profile.user.photoUrl),
