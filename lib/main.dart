@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Pages/HomePage.dart';
-import 'package:embark/Styles/Colors.dart';
-import 'package:embark/Styles/Colors.dart';
+import 'package:embark/Pages/PostCardPage.dart';
+import 'package:embark/Styles/Themes.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -22,10 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: BackgroundImage(themes),
+      home: HomePage(themes),
     );
   }
 }
-
-
-

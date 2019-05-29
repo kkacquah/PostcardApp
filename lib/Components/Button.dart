@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:embark/Styles/Themes.dart';
 import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Styles/Icons.dart';
 
@@ -19,7 +20,7 @@ class EmbarkIconButton extends StatelessWidget {
     if (_outline) {
       return Container(
           margin: this._margin,
-          width: size.width * (3 / 8),
+          width: size.width * 0.4,
           height: 50,
           child: OutlineButton(
               shape: new RoundedRectangleBorder(
@@ -151,7 +152,7 @@ class EmbarkButtonGradient extends StatelessWidget {
                   splashColor: _theme.primary(),
                   child: Text('Sign Up',
                       style: TextStyle(
-                          fontWeight: FontWeight.w300,
+                          fontFamily: 'Montserrat',
                           fontSize: 20,
                           foreground: Paint()
                             ..shader = _theme
@@ -176,8 +177,7 @@ class EmbarkButtonGradient extends StatelessWidget {
               color: Colors.transparent,
               child: Text(this._text,
                   style: TextStyle(
-                      fontFamily: 'PlayfairDisplay',
-                      fontWeight: FontWeight.w300,
+                      fontFamily: 'Montserrat',
                       fontSize: 20,
                       color: EmbarkSurfaceWhite))));
     }

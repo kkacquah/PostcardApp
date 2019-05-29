@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Styles/Colors.dart';
+import 'package:embark/Styles/Themes.dart';
 import 'homePageUtil.dart';
-import 'package:embark/Components/BackgroundShape.dart';
-import 'SignUp.dart';
 import 'package:embark/Components/Button.dart';
-import 'LogIn.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:embark/Services/authentication.dart';
+import 'package:embark/Styles/Icons.dart';
 
 //Render home Screen
-class BackgroundImage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   List<EmbarkTheme> _themes;
 
   //Set Using Themes
-  BackgroundImage(List<EmbarkTheme> themes) {
+  HomePage(List<EmbarkTheme> themes) {
     this._themes = themes;
   }
 
   @override
-  _BackgroundImageState createState() => _BackgroundImageState();
+  __HomePageState createState() => __HomePageState();
 }
 
-class _BackgroundImageState extends State<BackgroundImage> {
+class __HomePageState extends State<HomePage> {
   PageController _backgroundController =
       new PageController(); // make seperate controllers
   PageController _cardController = new PageController(); // for each scrollables
@@ -30,25 +29,14 @@ class _BackgroundImageState extends State<BackgroundImage> {
 
   @override
   Widget build(BuildContext context) {
-    Function login = () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => LogIn(widget._themes[_card])),
-      );
-    };
-    Function signup = () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => SignUp(widget._themes[_card])),
-      );
-    };
     Size size = MediaQuery.of(context).size;
     PageList pages = PageList(widget._themes, size);
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         body: NotificationListener<ScrollNotification>(
             child: Stack(alignment: Alignment.center, children: <Widget>[
-              IgnorePointer(child:Container(
+              IgnorePointer(
+                  child: Container(
                 //BACKGROUND
                 height: size.height,
                 child: ListView(
@@ -57,72 +45,136 @@ class _BackgroundImageState extends State<BackgroundImage> {
                   children: pages.getBackgrounds(),
                 ),
               )),
-
-              Background(),
-
               Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
                     //title 1/8
                     Container(
-                        height: size.height / 8,
+                        height: size.height / 6,
                         child: Align(
-                            alignment: Alignment.center,
+                            alignment: Alignment.topCenter,
                             child: AnimatedOpacity(
                                 duration:
                                     Duration(milliseconds: AnimationDuration),
                                 opacity: _titleOpacity,
-                                child: Text(
-                                  'Embark',
-                                  textAlign: TextAlign.center,
-                                  style: new TextStyle(
-                                      fontFamily: 'PlayfairDisplay',
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 36.0,
-                                      color: EmbarkSurfaceWhite),
-                                )))),
-                        Container(
-                          //BACKGROUND
-                          height: size.height/2,
+                                child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text(
+                                        'HelloFrom',
+                                        textAlign: TextAlign.center,
+                                        style: new TextStyle(
+                                            fontFamily: widget._themes[_card]
+                                                .fontFamily(),
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 36.0,
+                                            color: EmbarkSurfaceWhite),
+                                      ),
+                                      Text(
+                                        'Share your journeys with the world.',
+                                        textAlign: TextAlign.center,
+                                        style: new TextStyle(
+                                            fontFamily: widget._themes[_card]
+                                                .fontFamily(),
+                                            fontWeight: FontWeight.w200,
+                                            fontSize: 20.0,
+                                            color: EmbarkSurfaceWhite),
+                                      )
+                                    ])))),
+                    Container(
+                      //BACKGROUND
+                      height: size.height / 2,
 
-                          child: PageView(
-                            controller: this._cardController,
-                            scrollDirection: Axis.horizontal,
-                            children: pages.getCards(),
-                          ),
-                        ),
+                      child: PageView(
+                        controller: this._cardController,
+                        scrollDirection: Axis.horizontal,
+                        children: pages.getCards(),
+                      ),
+                    ),
                     //Buttons 5/8 - 8/8
                     AnimatedOpacity(
                         duration: Duration(milliseconds: AnimationDuration),
                         opacity: _titleOpacity,
                         child: Column(children: <Widget>[
-//                          Container(
-//                            //Card Scroller 1/8 - 5/8
-//                            //TODO: FIX OLD ANIMATION
-//                            padding:EdgeInsets.only(left:60, right:60, bottom:70),
-//                            height: size.height / 2,
-//                            child: pages.getCard(_card)
-//                          ),
-                          EmbarkButton(widget._themes[_card], login, "Log In",
-                              false, EdgeInsets.all(25)),
-                          EmbarkButton(
-                              widget._themes[_card], signup, "Sign Up", true, EdgeInsets.all(15))
+                          Container(
+                            height: 50,
+                            padding: EdgeInsets.symmetric(
+                                horizontal: size.width / 12),
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Expanded(
+                                      flex: 1,
+                                      child: Container(
+                                          color:
+                                              widget._themes[_card].primary(),
+                                          height: 1)),
+                                  Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      child: Text("CONTINUE WITH",
+                                          style: TextStyle(
+                                              fontFamily: "Montserrat",
+                                              fontWeight: FontWeight.w500,
+                                              color: widget._themes[_card]
+                                                  .primary(),
+                                              fontSize: 12))),
+                                  Expanded(
+                                      flex: 1,
+                                      child: Container(
+                                          color:
+                                              widget._themes[_card].primary(),
+                                          height: 1)),
+                                ]),
+                          ),
+                          Container(
+                            height: 50,
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  EmbarkIconButton(
+                                      facebookTheme,
+                                      () =>
+                                          authServiceFacebook.facebookSignIn(),
+                                      " Facebook",
+                                      true,
+                                      EdgeInsets.symmetric(horizontal: 15),
+                                      facebookIcon),
+                                  EmbarkIconButton(
+                                      googleTheme,
+                                      () => authServiceGoogle.googleSignIn(),
+                                      " Google",
+                                      true,
+                                      EdgeInsets.symmetric(horizontal: 15),
+                                      googleIcon)
+                                ]),
+                          )
                         ]))
                   ])
             ]),
             onNotification: (ScrollNotification scrollInfo) {
               // HEY!! LISTEN!!
               // this will set controller1's offset the same as controller2's
+              // do nothing on overscroll
+
+              if (scrollInfo is OverscrollNotification ||
+                  scrollInfo.metrics.outOfRange) {
+                return;
+              }
               _backgroundController.jumpTo(_cardController.offset);
               double normalizedOffsetTwoPlaces =
-                  roundDecimal(2, (_backgroundController.offset) / (size.width));
+                  roundDecimal(2, (_cardController.offset) / (size.width));
               int cardNumber =
                   //epsilon to allow for rounding errors
                   normalizedOffsetTwoPlaces.floor();
               double opacityTwoPlaces = roundDecimal(
                   2,
-                  (_backgroundController.offset - size.width * cardNumber) /
+                  (_cardController.offset - size.width * cardNumber) /
                       (size.width));
               double progress = (1 - opacityTwoPlaces);
               if (progress < 0.99) {

@@ -14,7 +14,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "2.1.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -79,10 +79,12 @@ packages:
   flutter_facebook_login:
     dependency: "direct main"
     description:
-      name: flutter_facebook_login
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.0"
+      path: "."
+      ref: HEAD
+      resolved-ref: "6971fc23ce4b158d8aa5157420442641d3d6ac65"
+      url: "https://github.com/lequanghiep74/flutter_facebook_login"
+    source: git
+    version: "2.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -150,7 +152,7 @@ packages:
       name: quiver
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3"
+    version: "2.0.2"
   rxdart:
     dependency: "direct main"
     description:
@@ -204,7 +206,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.5"
+    version: "0.2.4"
   typed_data:
     dependency: transitive
     description:

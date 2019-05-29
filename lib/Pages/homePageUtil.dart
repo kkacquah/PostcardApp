@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Styles/Colors.dart';
+import 'package:embark/Styles/Themes.dart';
 import 'package:embark/Components/Postcard.dart';
 import 'dart:math';
 
 //list of pages to scroll through
 class PageList {
   List<Page> _pages;
+
   PageList(List<EmbarkTheme> themes, Size size) {
     _pages = new List(themes.length);
     for (var i = 0; i < themes.length; i++) {
-      _pages[i] = Page(themes[i],size);
+      _pages[i] = Page(themes[i], size);
     }
   }
 
@@ -28,12 +30,11 @@ class PageList {
     }
     return cards;
   }
-  Widget getCard(int i){
+
+  Widget getCard(int i) {
     return _pages[i].getCard();
   }
 }
-
-
 
 //Page to scroll through
 class Page {
@@ -48,10 +49,10 @@ class Page {
         width: size.width,
         decoration: BoxDecoration(gradient: _theme.backgroundGradient()));
     PostCardInfo pagePostCardInfo = PostCardInfo("2 hours ago",
-        "Practicing My Spanish", "Cafetaria El Indio, Seville Spain");
-    _card = Postcard(
-        _theme,
-        pagePostCardInfo);
+        "Practicing Spanish", "Cafetaria El Indio, Seville Spain");
+    _card = Container(
+        padding: EdgeInsets.only(left: 60, right: 60, bottom: 10, top: 10),
+        child: Postcard(_theme, pagePostCardInfo));
   }
 
   Widget getBackground() {

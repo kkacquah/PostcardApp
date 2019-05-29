@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>477625911020-1q4b3qvq115uors7ki0iir440cruh5ki.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.477625911020-1q4b3qvq115uors7ki0iir440cruh5ki</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>477625911020-2qo01g5cpu21br3ktbtvmck67ia1m3d8.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAGHHdtgnUNx_lgpKGn4hIoRcFxJzzVElo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>477625911020</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kenacquah.postcardapp</string>
+	<key>PROJECT_ID</key>
+	<string>trusty-wares-240914</string>
+	<key>STORAGE_BUCKET</key>
+	<string>trusty-wares-240914.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:477625911020:ios:3c205084504b0861</string>
+	<key>DATABASE_URL</key>
+	<string>https://trusty-wares-240914.firebaseio.com</string>
+</dict>
+</plist>
