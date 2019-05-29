@@ -10,32 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e14628-8faf-4c68-a6d6-509e73caeda9" name="Default Changelist" comment="google and facebook commit">
-      <change afterPath="$PROJECT_DIR$/lib/Components/EmbarkAppBar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Components/FancyTabBar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Components/tabItem.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/PostcardInfo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/profile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Components/ScrapbookPostcard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Components/BackgroundShape.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Components/Postcard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/Postcard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/LoginPage/LoginPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Pages/homePageUtil.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/LoginPage/LoginPageUtil.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Services/authentication.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Services/authentication.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Styles/Colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Styles/Colors.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Components/Postcard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/LoginPostcard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/LoginPage/LoginPageUtil.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/LoginPage/LoginPageUtil.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Services/PostcardInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Services/PostcardInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Services/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Services/profile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -52,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Services/profile.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+            <state relative-caret-position="1139">
+              <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -62,10 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+        <entry file="file://$PROJECT_DIR$/lib/Components/ScrapbookPostcard.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="216">
+              <caret line="39" column="79" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="79" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -74,55 +64,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/widget_test.dart">
+        <entry file="file://$PROJECT_DIR$/lib/Styles/Themes.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Services/authentication.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Components/Postcard.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Components/FancyTabBar.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/Components/EmbarkAppBar.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="272">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -131,22 +76,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart">
+        <entry file="file://$PROJECT_DIR$/lib/Styles/Colors.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-71">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.flutter-plugins">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/painting/image_provider.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="482" column="8" selection-start-line="482" selection-start-column="8" selection-end-line="482" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/Services/PostcardInfo.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+            <state relative-caret-position="306">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/fade_in_image.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2312">
+              <caret line="81" column="24" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -154,11 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Pages/LoginPage/LoginPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -218,7 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" />
         <option value="$PROJECT_DIR$/lib/headerUtil.dart" />
         <option value="$PROJECT_DIR$/lib/exampleData.dart" />
         <option value="$PROJECT_DIR$/lib/header.dart" />
@@ -251,29 +221,31 @@
         <option value="$PROJECT_DIR$/lib/Pages/HomePage.dart" />
         <option value="$PROJECT_DIR$/lib/Pages/MyPostcards.dart" />
         <option value="$PROJECT_DIR$/lib/Pages/MyPostcardsPage.dart" />
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/Pages/LoginPage.dart" />
         <option value="$PROJECT_DIR$/lib/Components/AnimatedNavBar.dart" />
         <option value="$PROJECT_DIR$/lib/Components/tabItem.dart" />
         <option value="$PROJECT_DIR$/lib/Styles/Colors.dart" />
         <option value="$PROJECT_DIR$/lib/Services/authentication.dart" />
         <option value="$PROJECT_DIR$/lib/Services/postcardInfo.dart" />
-        <option value="$PROJECT_DIR$/lib/Services/PostcardInfo.dart" />
-        <option value="$PROJECT_DIR$/lib/Pages/LoginPage/LoginPageUtil.dart" />
         <option value="$PROJECT_DIR$/lib/Components/Postcard.dart" />
         <option value="$PROJECT_DIR$/test/widget_test.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
-        <option value="$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart" />
         <option value="$PROJECT_DIR$/lib/Pages/LoginPage/LoginPage.dart" />
-        <option value="$PROJECT_DIR$/lib/Services/profile.dart" />
         <option value="$PROJECT_DIR$/lib/Components/FancyTabBar.dart" />
         <option value="$PROJECT_DIR$/lib/Components/EmbarkAppBar.dart" />
+        <option value="$PROJECT_DIR$/lib/Components/LoginPostcard.dart" />
+        <option value="$PROJECT_DIR$/lib/Pages/LoginPage/LoginPageUtil.dart" />
+        <option value="$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart" />
+        <option value="$PROJECT_DIR$/lib/Services/profile.dart" />
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/Components/ScrapbookPostcard.dart" />
+        <option value="$PROJECT_DIR$/lib/Services/PostcardInfo.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
-    <option name="width" value="1950" />
+    <option name="width" value="1948" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectView">
@@ -283,7 +255,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -377,6 +348,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -460,23 +432,23 @@
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7873563" visible="true" weight="0.17303823" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7798507" visible="true" weight="0.1750503" />
       <window_info id="Captures" order="1" sideWeight="0.10121457" side_tool="true" weight="0.21327968" />
-      <window_info id="Structure" order="2" sideWeight="0.21264368" side_tool="true" visible="true" weight="0.17303823" />
+      <window_info id="Structure" order="2" sideWeight="0.22014925" side_tool="true" visible="true" weight="0.1750503" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Build Variants" order="5" side_tool="true" weight="0.16643551" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.4988764" weight="0.47783932" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.437058" />
+      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32956153" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.24186705" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="4" />
       <window_info anchor="bottom" id="Logcat" order="5" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.38048092" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.50777936" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.47949082" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32956153" />
@@ -576,34 +548,15 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/Components/LoginPostcard.dart</url>
+          <line>12</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/android/app/src/main/res/mipmap/launch_image.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/material/input_border.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="168" column="44" selection-start-line="168" selection-start-column="34" selection-end-line="168" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/painting/borders.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/scrollable.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6921">
@@ -744,20 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Styles/Colors.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/exampleData.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -769,23 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Components/Button.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Pages/LoginPage/LoginPageUtil.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -809,16 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Styles/Themes.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/widget_test.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -836,67 +748,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Services/PostcardInfo.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="238">
           <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Pages/LoginPage/LoginPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Services/profile.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Components/Postcard.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Components/FancyTabBar.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -905,11 +760,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Components/EmbarkAppBar.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="68">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Components/LoginPostcard.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Components/FancyTabBar.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Components/Button.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Pages/LoginPage/LoginPageUtil.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Pages/PostcardPage/MyPostcardsPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/fade_in_image.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2312">
+          <caret line="81" column="24" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/painting/image_provider.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="482" column="8" selection-start-line="482" selection-start-column="8" selection-end-line="482" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.flutter-plugins">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Components/ScrapbookPostcard.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="39" column="79" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Pages/LoginPage/LoginPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Styles/Themes.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Styles/Colors.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Services/profile.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Services/PostcardInfo.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>

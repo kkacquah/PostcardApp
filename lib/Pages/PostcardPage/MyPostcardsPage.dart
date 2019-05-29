@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:embark/Components/FancyTabBar.dart';
+import 'package:embark/Components/ScrapbookPostcard.dart';
 import 'package:embark/Services/profile.dart';
 import 'package:embark/Components/EmbarkAppBar.dart';
 import 'package:embark/Styles/Colors.dart';
@@ -13,8 +13,10 @@ class MyPostcardsPage extends StatefulWidget {
 }
 
 class __MyPostcardsPageState extends State<MyPostcardsPage> {
+
   @override
   Widget build(BuildContext context) {
+    print(profile.myPostcards[0]);
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar:EmbarkAppBar(profile.user.photoUrl),
@@ -38,7 +40,10 @@ class __MyPostcardsPageState extends State<MyPostcardsPage> {
                   //transparent white
                 ],
               ))),
+          Container(child:ScrapbookPostcard(profile.myPostcards[0])),
+          //Bottom Nav Bar
           Align(alignment: Alignment.bottomCenter, child: FancyTabBar()),
+          //Add FAB
           Align(
               alignment: Alignment.topRight,
               child: Container(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Styles/Themes.dart';
-import 'package:embark/Components/Postcard.dart';
+import 'package:embark/Components/LoginPostcard.dart';
 import 'package:embark/Services/PostcardInfo.dart';
 import 'dart:math';
 
@@ -51,7 +51,7 @@ class Page {
         decoration: BoxDecoration(gradient: _theme.backgroundGradient()));
     _card = Container(
         padding: EdgeInsets.only(left: 60, right: 60, bottom: 10, top: 10),
-        child: Postcard(_theme));
+        child: LoginPostcard(_theme));
   }
 
   Widget getBackground() {
