@@ -1,6 +1,8 @@
 import 'package:embark/Styles/Colors.dart';
 import 'package:flutter/material.dart';
-
+Color hexToColor(String code) {
+  return new Color(int.parse(code, radix: 16) + 0xFF000000);
+}
 //Immutable object representing postcard theme
 class EmbarkTheme {
   final Color _primary; //darkest
@@ -16,6 +18,10 @@ class EmbarkTheme {
   }
   String fontFamily(){
     return this._fontFamily;
+  }
+  static EmbarkTheme fromMap(Map<String,dynamic> inputMap){
+    print(inputMap);
+    return EmbarkTheme(hexToColor(inputMap["primary"]), hexToColor(inputMap["secondary"]),hexToColor(inputMap["primaryVariant"]),inputMap["fontFamily"]);
   }
   Color primaryVariant(){
     return this._primaryVariant;

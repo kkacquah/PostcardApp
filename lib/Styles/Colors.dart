@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 const EmbarkSurfaceWhite = const Color(0xFFFFFBFA);
 const EmbarkSurfaceWhiteTransparent70 = const Color(0xB2FFFBFA);
 const EmbarkBackgroundWhite = Colors.white;
-const Black = const Color(0xFF000000);
-const EmbarkGray = const Color(0x66000000);
+const EmbarkAlmostBlack = const Color(0xFF282828);
+const EmbarkGray = const Color(0xFFF7F7F5);
 const Transparent = const Color(0x00000000);
 
 
