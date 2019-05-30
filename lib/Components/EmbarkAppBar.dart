@@ -9,7 +9,7 @@ class EmbarkAppBar extends StatelessWidget with PreferredSizeWidget {
 
   Widget build(BuildContext context) {
     //container wrapps whole screen
-    return AppBar(
+    return SliverAppBar(
       backgroundColor: EmbarkAlmostBlack,
       title: Text('Embark',
           style: TextStyle(
