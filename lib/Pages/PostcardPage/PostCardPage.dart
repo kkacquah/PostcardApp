@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Components/FancyTabBar.dart';
 import 'package:embark/Components/ScrapbookPostcard.dart';
-import 'package:embark/Components/FullPostCard.dart';
+import 'package:embark/Components/FullPostcard.dart';
 import 'package:embark/Services/profile.dart';
 import 'package:embark/Components/EmbarkAppBar.dart';
 import 'package:embark/Styles/Colors.dart';
 
-class PostCardPage extends StatefulWidget {
+class PostcardPage extends StatefulWidget {
   //Set Using Themes
-  PostCardPage();
+  PostcardPage();
   @override
-  __PostCardPageState createState() => __PostCardPageState();
+  __PostcardPageState createState() => __PostcardPageState();
 }
 
-class __PostCardPageState extends State<PostCardPage> {
+class __PostcardPageState extends State<PostcardPage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         body: Stack(children: <Widget>[
-          Container(child: FullPostCard(profile.myPostcards[0])),
+          Container(child: FullPostcard(profile.myPostcards[0])),
 
           //Bottom Nav Bar
           Align(alignment: Alignment.bottomCenter, child: FancyTabBar()),
