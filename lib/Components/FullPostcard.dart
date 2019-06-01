@@ -12,18 +12,36 @@ class TagFilterEntry {
   final String tag;
 }
 
-class FullPostcard extends StatelessWidget {
+class FullPostcard extends StatefulWidget {
   final PostcardInfo _postcardInfo;
+  bool _photoState;
+
+  FullPostcard(this._postcardInfo, this._photoState);
+
+  @override
+  State createState() {
+    return _FullPostcardState(this._postcardInfo);
+  }
+}
+
+class _FullPostcardState extends State<FullPostcard>
+    {
+  final PostcardInfo _postcardInfo;
+  AnimationController controller;
+  Animation<Offset> offset;
   DateTime date;
 
-  FullPostcard(this._postcardInfo){
+  _FullPostcardState(this._postcardInfo) {
     date = this._postcardInfo.timestamp.toDate();
+
   }
 
 
   Iterable<Widget> get tagWidgets sync* {
     bool filled = true;
-    for (TagFilterEntry tag in  _postcardInfo.sentiments.map((value){return TagFilterEntry(value);})) {
+    for (TagFilterEntry tag in _postcardInfo.sentiments.map((value) {
+      return TagFilterEntry(value);
+    })) {
       filled = !filled;
       if (filled) {
         yield Chip(
@@ -56,31 +74,10 @@ class FullPostcard extends StatelessWidget {
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     //container wrapps whole screen
     return Stack(
       children: [
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: new NetworkImage(_postcardInfo.photoUrl),
-            ),
-          ),
-          child: new BackdropFilter(
-            filter: new ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-            child: new Container(
-              decoration:
-                  new BoxDecoration(color: Colors.white.withOpacity(0.0)),
-            ),
-          ),
-        ),
-        Container(
-          width: size.width,
-          margin: EdgeInsets.only(bottom:size.height*(3/8)),
-        child:ClipRect(
-            clipper:CustomRect(),
-            child: Image.network(_postcardInfo.photoUrl, fit: BoxFit.fitWidth))),
         Positioned(
             bottom: 68,
             width: size.width,
@@ -138,7 +135,8 @@ class FullPostcard extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(2, 0, 2, 0),
-                                  child: Text(_postcardInfo.location,
+                                  child: Text(
+                                      " " + _postcardInfo.location + " ",
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           fontSize: 14,
@@ -154,7 +152,8 @@ class FullPostcard extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(2, 0, 2, 0),
-                                  child: Text("${date.month}/${date.day}/${date.year}",
+                                  child: Text(
+                                      " ${date.month}/${date.day}/${date.year}",
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           fontSize: 14,
@@ -179,8 +178,7 @@ class FullPostcard extends StatelessWidget {
                     ),
                     Padding(
                         padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
-                        child: Text(
-                            _postcardInfo.status,
+                        child: Text(_postcardInfo.status,
                             style: TextStyle(
                                 fontSize: 12,
                                 color: _postcardInfo.theme.primary(),
@@ -208,13 +206,14 @@ class FullPostcard extends StatelessWidget {
                           Spacer(),
                           OutlineButton.icon(
                             onPressed: () {},
-                            borderSide: BorderSide(color: _postcardInfo.theme.secondary()),
+                            borderSide: BorderSide(
+                                color: _postcardInfo.theme.secondary()),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)),
                             textColor: _postcardInfo.theme.secondary(),
                             icon: Icon(
                               Icons.share,
-                              color:  _postcardInfo.theme.secondary(),
+                              color: _postcardInfo.theme.secondary(),
                               size: 16,
                             ),
                             label: Text('Share'),
@@ -232,15 +231,15 @@ class FullPostcard extends StatelessWidget {
   }
 }
 
-class CustomRect extends CustomClipper<Rect>{
+class CustomRect extends CustomClipper<Rect> {
   @override
   Rect getClip(Size size) {
-     Rect rect = Rect.fromLTRB(0.0,0, size.width, size.height);
-      return rect;
+    Rect rect = Rect.fromLTRB(0.0, 0, size.width, size.height);
+    return rect;
   }
+
   @override
   bool shouldReclip(CustomRect oldClipper) {
     return false;
   }
 }
-
