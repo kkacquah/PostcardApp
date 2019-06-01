@@ -51,7 +51,7 @@ class Profile {
 
   facebookSignIn() async {
     FirebaseUser user = await _authService.facebookSignIn();
-    _intializeUser(user);
+    await _intializeUser(user);
   }
 
   googleSignIn() async {
@@ -60,10 +60,11 @@ class Profile {
     await _intializeUser(user);
   }
 
-  Future<List<PostcardInfo>> _queryPostcards(QuerySnapshot postcardsQuery) async {
+  Future<List<PostcardInfo>> _queryPostcards(
+      QuerySnapshot postcardsQuery) async {
     List<DocumentSnapshot> postcardDocuments = postcardsQuery.documents;
-    List<String> postcardIDs = postcardDocuments.map((
-        DocumentSnapshot docSnapshot)  {
+    List<String> postcardIDs =
+        postcardDocuments.map((DocumentSnapshot docSnapshot) {
       //TODO: IF Exists
       if (docSnapshot.data == null) {
         return null;
@@ -71,25 +72,30 @@ class Profile {
       return docSnapshot.documentID;
     }).toList();
     print(postcardIDs);
-     QuerySnapshot postcardDocumentFromIDs = await _db
-        .collection('postcards')
-        .getDocuments();
+    QuerySnapshot postcardDocumentFromIDs =
+        await _db.collection('postcards').getDocuments();
     return postcardDocumentFromIDs.documents.where((
         //Only get document snapshots where data != null and the documentID is a postcardid
-        DocumentSnapshot docSnapshot)  {
-
+        DocumentSnapshot docSnapshot) {
       if (docSnapshot.data == null) {
         return false;
       }
       return postcardIDs.contains(docSnapshot.documentID);
-    }).map((DocumentSnapshot postcardDocument){
+    }).map((DocumentSnapshot postcardDocument) {
       //Map document snapshots into the postcardDocuments
       return PostcardInfo(
-          postcardDocument.data['title'], postcardDocument.documentID,
-          postcardDocument.data['photoUrl'],
-          postcardDocument.data['locationString'],
-          EmbarkTheme.fromMap(Map<String, dynamic>.from(postcardDocument.data['theme'])),
-          postcardDocument.data['aspectRatio']);
+        postcardDocument.data['title'],
+        postcardDocument.documentID,
+        postcardDocument.data['photoUrl'],
+        postcardDocument.data['locationString'],
+        EmbarkTheme.fromMap(
+            Map<String, dynamic>.from(postcardDocument.data['theme'])),
+        postcardDocument.data['aspectRatio'],
+        postcardDocument.data['sentiments'],
+        postcardDocument.data['geopoint'],
+        postcardDocument.data['timestamp'],
+        postcardDocument.data['status'],
+      );
     }).toList();
   }
 
@@ -98,14 +104,16 @@ class Profile {
     print("setting");
     await _db
         .collection('postcards')
-        .document(documentID).get().then((value) => {print(value)});
+        .document(documentID)
+        .get()
+        .then((value) => {print(value)});
 //    print(postcardDocument);
-
   }
 
   void signOut() {
     _authService.signOut();
   }
 }
+
 //Global user profile
 Profile profile = Profile();

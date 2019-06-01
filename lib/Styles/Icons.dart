@@ -6,6 +6,7 @@ final locationOn = Icon(
   color: EmbarkGray,
   size: 10.0,
 );
+
 const IconData facebook = const IconData(0xf09a, fontFamily: "BrandIcons");
 const IconData google = const IconData(0xf1a0, fontFamily: "BrandIcons");
 final facebookIcon = Icon(

@@ -4,6 +4,7 @@ import 'package:embark/Components/ScrapbookPostcard.dart';
 import 'package:embark/Services/profile.dart';
 import 'package:embark/Services/PostcardInfo.dart';
 import 'package:embark/Components/EmbarkAppBar.dart';
+import 'package:embark/Components/FullPostcard.dart';
 import 'package:embark/Styles/Colors.dart';
 
 class MyPostcardsPage extends StatefulWidget {
@@ -15,40 +16,53 @@ class MyPostcardsPage extends StatefulWidget {
 }
 
 class __MyPostcardsPageState extends State<MyPostcardsPage> {
-  Row _getPostcardColumns() {
-    List<PostcardInfo> oddPostcards = List<PostcardInfo>();
-    List<PostcardInfo> evenPostcards = List<PostcardInfo>();
-    Widget oddColumn;
-    Widget evenColumn;
-    for (int i = 0; i < profile.myPostcards.length; i = i + 2) {
-      evenPostcards.add(profile.myPostcards[i]);
-      //DELETE Later Adds extra postcards
-    }
-    for (int i = 1; i < profile.myPostcards.length; i = i + 2) {
-      oddPostcards.add(profile.myPostcards[i]);
-      //DELETE Later Adds extra postcards
-    }
-    List<Widget> oddColumnWidgets = List<Widget>.from(oddPostcards.map((value) {
-      return ScrapbookPostcard(value);
-    }).toList());
+  Widget _getPostcardColumns() {
+    if (profile.myPostcards.length == 0) {
+      return Align(alignment: Alignment.center,child:Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Text("Click the '+' sign above and start scrapbooking",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: "OpenSans",
+                  color: Colors.black38,
+                  fontSize: 26,
+              ))));
+    } else {
+      List<PostcardInfo> oddPostcards = List<PostcardInfo>();
+      List<PostcardInfo> evenPostcards = List<PostcardInfo>();
+      Widget oddColumn;
+      Widget evenColumn;
+      for (int i = 0; i < profile.myPostcards.length; i = i + 2) {
+        evenPostcards.add(profile.myPostcards[i]);
+        //DELETE Later Adds extra postcards
+      }
+      for (int i = 1; i < profile.myPostcards.length; i = i + 2) {
+        oddPostcards.add(profile.myPostcards[i]);
+        //DELETE Later Adds extra postcards
+      }
+      List<Widget> oddColumnWidgets =
+          List<Widget>.from(oddPostcards.map((value) {
+        return ScrapbookPostcard(value);
+      }).toList());
 
-    oddColumnWidgets.add(Container(
-    child: Container(height: 200))
-    );
-    List<Widget> evenColumnWidgets = List<Widget>.from(evenPostcards.map((value) {
-      return ScrapbookPostcard(value);
-    }).toList());
+      oddColumnWidgets.add(Container(child: Container(height: 200)));
+      List<Widget> evenColumnWidgets =
+          List<Widget>.from(evenPostcards.map((value) {
+        return ScrapbookPostcard(value);
+      }).toList());
 
-    oddColumn = Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: oddColumnWidgets);
-    evenColumn = Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: evenColumnWidgets);
-    return Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[oddColumn, evenColumn]);
+      oddColumn = Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: oddColumnWidgets);
+      evenColumn = Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: evenColumnWidgets);
+      return SingleChildScrollView(
+          child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[oddColumn, evenColumn]));
+    }
   }
 
   @override
@@ -81,9 +95,8 @@ class __MyPostcardsPageState extends State<MyPostcardsPage> {
                     ],
                   ))),
               Container(
-                  height: double.infinity,
-                  child:
-                      SingleChildScrollView(child: this._getPostcardColumns())),
+                margin: EdgeInsets.only(bottom:70),
+                  height: double.infinity, child: this._getPostcardColumns()),
               //Bottom Nav Bar
               Align(alignment: Alignment.bottomCenter, child: FancyTabBar()),
               //Add FAB

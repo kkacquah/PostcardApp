@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:embark/Services/PostcardInfo.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:embark/Styles/Colors.dart';
+import 'package:embark/Pages/PostcardPage/FullPostcardPage.dart';
 import 'dart:ui';
 
 class ScrapbookPostcard extends StatelessWidget {
@@ -14,7 +15,7 @@ class ScrapbookPostcard extends StatelessWidget {
   void _openPostcard(BuildContext context) async {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ScrapbookPostcard(this._postcardInfo)),
+      MaterialPageRoute(builder: (context) => FullPostcardPage(this._postcardInfo)),
     );
   }
   Widget build(BuildContext context) {

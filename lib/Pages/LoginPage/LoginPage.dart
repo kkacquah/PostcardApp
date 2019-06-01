@@ -7,6 +7,7 @@ import 'package:embark/Components/Button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:embark/Services/profile.dart';
 import 'package:embark/Styles/Icons.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 //Render home Screen
 class LoginPage extends StatefulWidget {
@@ -27,26 +28,66 @@ class __LoginPageState extends State<LoginPage> {
   PageController _cardController = new PageController(); // for each scrollables
   int _card = 0;
   double _titleOpacity = 1;
+  bool _loginLoading =false;
   int AnimationDuration = 400;
 
+  void login(BuildContext context) {
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MyPostcardsPage()),
+    );
+    setState(() {
+      _loginLoading = false;
+    });
+  }
+  void _loginFacebook(BuildContext context) async{
+    setState(() {
+      _loginLoading = true;
+    });
+    await profile.facebookSignIn();
+    login(context);
+  }
+  void _loginGoogle(BuildContext context) async{
+    setState(() {
+        _loginLoading = true;
+    });
+    await profile.googleSignIn();
+    login(context);
+  }
+  Widget _loadingLogin(BuildContext context){
+    if (this._loginLoading){
+      return SpinKitRing(
+        color: widget._themes[_card].secondary().withOpacity(0.7),
+        size: 40.0,
+      );
+    } else {
+      return Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            EmbarkIconButton(
+                facebookTheme,
+                    () => _loginFacebook(context),
+                " Facebook",
+                true,
+                EdgeInsets.symmetric(horizontal: 15),
+                facebookIcon),
+            EmbarkIconButton(
+                googleTheme,
+                    () => _loginGoogle(context),
+                " Google",
+                true,
+                EdgeInsets.symmetric(horizontal: 15),
+                googleIcon)
+          ]);
+    }
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     PageList pages = PageList(widget._themes, size);
-    void login() {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => MyPostcardsPage()),
-      );
-    };
-    void loginFacebook() async{
-      await profile.facebookSignIn();
-      login();
-    };
-    void loginGoogle() async{
-      await profile.googleSignIn();
-      login();
-    };
+
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         body: NotificationListener<ScrollNotification>(
@@ -149,25 +190,7 @@ class __LoginPageState extends State<LoginPage> {
                           ),
                           Container(
                             height: 50,
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  EmbarkIconButton(
-                                      facebookTheme,
-                                      () => loginFacebook(),
-                                      " Facebook",
-                                      true,
-                                      EdgeInsets.symmetric(horizontal: 15),
-                                      facebookIcon),
-                                  EmbarkIconButton(
-                                      googleTheme,
-                                      () => loginGoogle(),
-                                      " Google",
-                                      true,
-                                      EdgeInsets.symmetric(horizontal: 15),
-                                      googleIcon)
-                                ]),
+                            child:_loadingLogin(context)
                           )
                         ]))
                   ])
