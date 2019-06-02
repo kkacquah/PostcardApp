@@ -4,6 +4,7 @@ import 'package:embark/Styles/Themes.dart';
 import 'LoginPageUtil.dart';
 import 'package:embark/Pages/PostcardPage/MyPostcardsPage.dart';
 import 'package:embark/Pages/PostcardPage/PostcardPage.dart';
+import 'package:embark/Pages/EditPostcardPage/EditPostcardPage.dart';
 import 'package:embark/Components/Button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:embark/Services/profile.dart';
@@ -37,7 +38,7 @@ class __LoginPageState extends State<LoginPage> {
     void login() {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => PostcardPage()),
+        MaterialPageRoute(builder: (context) => EditPostcardPage()),
       );
     }
 

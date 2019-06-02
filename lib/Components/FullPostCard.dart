@@ -27,25 +27,27 @@ class FullPostcard extends StatelessWidget {
 
   Iterable<Widget> get tagWidgets sync* {
     bool filled = true;
+    Color secondaryColor = _postcardInfo.theme.secondary();
+
     for (TagFilterEntry tag in _tags) {
       filled = !filled;
       if (filled) {
         yield Chip(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(500),
-              side: BorderSide(color: EmbarkRed100)),
+              side: BorderSide(color: secondaryColor)),
           backgroundColor: Colors.white,
           label: Text(tag.tag),
           labelStyle: TextStyle(
             fontFamily: _postcardInfo.theme.fontFamily(),
             fontWeight: FontWeight.w100,
-            color: EmbarkRed100,
+            color: secondaryColor,
             fontSize: 10,
           ),
         );
       } else {
         yield Chip(
-          backgroundColor: EmbarkRed100,
+          backgroundColor: secondaryColor,
           label: Text(tag.tag),
           labelStyle: TextStyle(
             fontFamily: _postcardInfo.theme.fontFamily(),
@@ -60,6 +62,9 @@ class FullPostcard extends StatelessWidget {
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    Color secondaryColor = _postcardInfo.theme.secondary();
+    String photoUrl = _postcardInfo.photoUrl;
+
     //container wrapps whole screen
     return Stack(
       children: [
@@ -68,7 +73,7 @@ class FullPostcard extends StatelessWidget {
             color: Colors.transparent,
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: new NetworkImage(_postcardInfo.photoUrl),
+              image: new NetworkImage(photoUrl),
             ),
           ),
           child: new BackdropFilter(
@@ -79,7 +84,7 @@ class FullPostcard extends StatelessWidget {
             ),
           ),
         ),
-        Image.network(_postcardInfo.photoUrl),
+        Image.network(photoUrl),
         Positioned(
             bottom: size.height * 0.085,
             width: size.width,
@@ -124,7 +129,7 @@ class FullPostcard extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                     fontSize: 24,
-                                    color: EmbarkRed100,
+                                    color: secondaryColor,
                                     fontWeight: FontWeight.bold,
                                     fontFamily:
                                         _postcardInfo.theme.fontFamily())),
@@ -196,7 +201,7 @@ class FullPostcard extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)),
                             textColor: Colors.white,
-                            color: EmbarkRed100,
+                            color: secondaryColor,
                             icon: Icon(
                               Icons.bookmark,
                               color: Colors.white,
@@ -207,13 +212,13 @@ class FullPostcard extends StatelessWidget {
                           Spacer(),
                           OutlineButton.icon(
                             onPressed: () {},
-                            borderSide: BorderSide(color: EmbarkRed100),
+                            borderSide: BorderSide(color: secondaryColor),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)),
-                            textColor: EmbarkRed100,
+                            textColor: secondaryColor,
                             icon: Icon(
                               Icons.share,
-                              color: EmbarkRed100,
+                              color: secondaryColor,
                               size: 16,
                             ),
                             label: Text('Share'),
