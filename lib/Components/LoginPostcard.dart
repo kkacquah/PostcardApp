@@ -19,6 +19,6 @@ class LoginPostcard extends StatelessWidget {
         elevation: 6.0,
         child: Container(
             padding: EdgeInsets.all(17.0),
-            child: Container(color: _theme.primaryVariant())));
+            child: Container(color: _theme.primaryVariant)));
   }
 }

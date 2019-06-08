@@ -12,6 +12,7 @@ import com.dataxad.fluttermailer.FlutterMailerPlugin;
 import io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin;
 import io.flutter.plugins.googlemaps.GoogleMapsPlugin;
 import io.flutter.plugins.googlesignin.GoogleSignInPlugin;
+import com.github.adee42.keyboardvisibility.KeyboardVisibilityPlugin;
 import io.flutter.plugins.packageinfo.PackageInfoPlugin;
 
 /**
@@ -33,6 +34,7 @@ public final class GeneratedPluginRegistrant {
     FluttertoastPlugin.registerWith(registry.registrarFor("io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin"));
     GoogleMapsPlugin.registerWith(registry.registrarFor("io.flutter.plugins.googlemaps.GoogleMapsPlugin"));
     GoogleSignInPlugin.registerWith(registry.registrarFor("io.flutter.plugins.googlesignin.GoogleSignInPlugin"));
+    KeyboardVisibilityPlugin.registerWith(registry.registrarFor("com.github.adee42.keyboardvisibility.KeyboardVisibilityPlugin"));
     PackageInfoPlugin.registerWith(registry.registrarFor("io.flutter.plugins.packageinfo.PackageInfoPlugin"));
   }
 

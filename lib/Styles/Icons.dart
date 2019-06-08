@@ -3,7 +3,7 @@ import 'package:embark/Styles/Colors.dart';
 
 final locationOn = Icon(
   Icons.location_on,
-  color: EmbarkGray,
+  color: EmbarkExtraLightGray,
   size: 10.0,
 );
 

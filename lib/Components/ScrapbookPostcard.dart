@@ -36,7 +36,7 @@ class ScrapbookPostcard extends StatelessWidget {
                 height: postcardWidth * _postcardInfo.aspectRatio,
                 width: postcardWidth,
                 child: Stack(children: <Widget>[
-                  Container(color:  _postcardInfo.theme.secondary()),
+                  Container(color:  _postcardInfo.theme.secondary),
                   FadeInImage.memoryNetwork(
                       fit: BoxFit.cover,
                       placeholder: kTransparentImage,
@@ -55,8 +55,8 @@ class ScrapbookPostcard extends StatelessWidget {
                           child: Text(_postcardInfo.title,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: EmbarkGray,
-                                fontFamily: _postcardInfo.theme.fontFamily(),
+                                color: EmbarkExtraLightGray,
+                                fontFamily: _postcardInfo.fontFamily,
                                 fontSize: 30,
                                 fontWeight: FontWeight.w700,
                               )))),

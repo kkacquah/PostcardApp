@@ -22,7 +22,7 @@ CatcherOptions profileOptions = CatcherOptions(
       gravity: ToastHandlerGravity.bottom,
       length: ToastHandlerLength.long,
       backgroundColor: EmbarkAlmostBlack,
-      textColor: EmbarkGray,
+      textColor: EmbarkExtraLightGray,
       textSize: 12.0,
       customMessage: "Sorry, but an unexpected error occured.")
   ],
@@ -30,7 +30,7 @@ CatcherOptions profileOptions = CatcherOptions(
 );
 void main() async {
   // Set default home.
-  Widget _defaultHome = new LoginPage(themes);
+  Widget _defaultHome = new LoginPage(EmbarkThemes.themes,EmbarkFonts.fonts);
   // Get result of the login function.
   profile.signOut();
   bool _result = await profile.setCurrentUser();

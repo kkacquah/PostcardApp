@@ -84,17 +84,17 @@ class Profile {
     }).map((DocumentSnapshot postcardDocument) {
       //Map document snapshots into the postcardDocuments
       return PostcardInfo(
-        postcardDocument.data['title'],
-        postcardDocument.documentID,
-        postcardDocument.data['photoUrl'],
-        postcardDocument.data['locationString'],
-        EmbarkTheme.fromMap(
-            Map<String, dynamic>.from(postcardDocument.data['theme'])),
-        postcardDocument.data['aspectRatio'],
-        postcardDocument.data['sentiments'],
-        postcardDocument.data['geopoint'],
-        postcardDocument.data['timestamp'],
-        postcardDocument.data['status'],
+        title: postcardDocument.data['title'],
+        uid: postcardDocument.documentID,
+        photoUrl: postcardDocument.data['photoUrl'],
+        location: postcardDocument.data['locationString'],
+        themeID:postcardDocument.data['themeID'],
+        fontID:postcardDocument.data['fontID'],
+        aspectRatio:postcardDocument.data['aspectRatio'],
+        sentiments:postcardDocument.data['sentiments'],
+        geopoint:postcardDocument.data['geopoint'],
+        timestamp:postcardDocument.data['timestamp'],
+        status:postcardDocument.data['status'],
       );
     }).toList();
   }

@@ -3,7 +3,9 @@ const EmbarkSurfaceWhite = const Color(0xFFFFFBFA);
 const EmbarkSurfaceWhiteTransparent70 = const Color(0xB2FFFBFA);
 const EmbarkBackgroundWhite = Colors.white;
 const EmbarkAlmostBlack = const Color(0xFF282828);
-const EmbarkGray = const Color(0xFFF7F7F5);
+const EmbarkExtraLightGray = const Color(0xFFF7F7F5);
+const EmbarkAlmostWhite= const Color(0xFFFFFCFC);
+const EmbarkLightGray = const Color(0xFFD8D8D8);
 const Transparent = const Color(0x00000000);
 
 
@@ -20,6 +22,7 @@ const EmbarkBlue900 = const Color(0xFF080c2a);
 const EmbarkBlue100 = const Color(0xFF3F51B5);
 const EmbarkBlue50 = const Color(0xFFE8EAF6);
 
+//TODO Add light gray, shadow color
 const EmbarkRed900 = const Color(0xFF141301);
 const EmbarkRed100 = const Color(0xFFAD0000);
 const EmbarkRed50 = const Color(0xFFFFD9DA);

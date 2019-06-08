@@ -3,6 +3,7 @@ import 'package:embark/Components/FancyTabBar.dart';
 import 'package:embark/Components/ScrapbookPostcard.dart';
 import 'package:embark/Services/profile.dart';
 import 'package:embark/Services/PostcardInfo.dart';
+import 'package:embark/Pages/EditPage/EditPage.dart';
 import 'package:embark/Components/EmbarkAppBar.dart';
 import 'package:embark/Components/FullPostcard.dart';
 import 'package:embark/Styles/Colors.dart';
@@ -64,7 +65,12 @@ class __MyPostcardsPageState extends State<MyPostcardsPage> {
               children: <Widget>[oddColumn, evenColumn]));
     }
   }
-
+  void _goToAddPage(BuildContext context) async {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => EditPostcardPage()),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -88,7 +94,7 @@ class __MyPostcardsPageState extends State<MyPostcardsPage> {
                     stops: [0.8, 1.0],
                     colors: [
                       // Colors are easy thanks to Flutter's Colors class.
-                      EmbarkGray,
+                      EmbarkExtraLightGray,
                       Color(0xFFD8D8D8),
 
                       //transparent white
@@ -103,11 +109,11 @@ class __MyPostcardsPageState extends State<MyPostcardsPage> {
               Align(
                   alignment: Alignment.topRight,
                   child: Container(
-                      margin: EdgeInsets.only(right: 25.0, top: 35),
+                      margin: EdgeInsets.only(right: 10, top: 10),
                       child: FloatingActionButton(
                         elevation: 6,
-                        backgroundColor: EmbarkGray,
-                        onPressed: () {},
+                        backgroundColor: EmbarkExtraLightGray,
+                        onPressed: () => _goToAddPage(context),
                         child: Icon(Icons.add, color: EmbarkAlmostBlack),
                       ))),
             ])));

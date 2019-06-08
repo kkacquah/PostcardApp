@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Services/PostcardInfo.dart';
-import 'package:embark/Components/FancyTabBar.dart';
+import 'package:embark/Components/EmbarkAppBar.dart';
 import 'package:embark/Components/EmbarkBackButton.dart';
+import 'package:embark/Services/profile.dart';
 import 'package:embark/Components/FullPostcard.dart';
-import 'package:transparent_image/transparent_image.dart';
+import 'PostcardMap.dart';
 import 'package:embark/Styles/Colors.dart';
 
 import 'dart:ui';
@@ -30,9 +31,9 @@ class _FullPostcardPageState extends State<FullPostcardPage>
   _FullPostcardPageState() {
     controller =
         AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    _fadeOutAnimation = Tween<double>(begin: 1.0, end: 0.0)
+    _fadeOutAnimation = Tween<double>(begin: 0.0, end: 1.0)
         .animate(controller);
-    offset = Tween<Offset>(begin: Offset.zero, end: Offset(1.0,0.0))
+    offset = Tween<Offset>(end: Offset.zero, begin: Offset(1.0,0.0))
         .animate(controller);
   }
 
@@ -54,7 +55,6 @@ class _FullPostcardPageState extends State<FullPostcardPage>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     controller.dispose();
     super.dispose();
   }
@@ -80,21 +80,14 @@ class _FullPostcardPageState extends State<FullPostcardPage>
         ),
         Container(
             width: size.width,
-            margin: EdgeInsets.only(bottom: size.height * (3 / 8)),
+            margin: EdgeInsets.only(bottom: size.height * (1 / 4)),
             child: ClipRect(
                 clipper: CustomRect(),
                 child: Image.network(widget._postcardInfo.photoUrl,
                     fit: BoxFit.fitWidth))),
         SlideTransition(
             position: offset,
-            child: Container(color: Colors.redAccent))
-//            child: BackdropFilter(
-//              filter: new ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-//              child: new Container(
-//                decoration:
-//                new BoxDecoration(color: Colors.white.withOpacity(0.0)),
-//              ),
-//            ))
+            child: Container(child: PostcardMap(widget._postcardInfo.geopoint,widget._postcardInfo.theme.hue)))
       ]);
   }
 
@@ -108,21 +101,19 @@ class _FullPostcardPageState extends State<FullPostcardPage>
 
     //container wraps whole screen
     return Scaffold(
+      appBar: EmbarkPostCardAppBar(profile.user.photoUrl),
       body: Stack(children: <Widget>[
         this._getBackground(size),
         //postcard info
         FullPostcard(widget._postcardInfo, this._photoState),
-
-        //Back Button
-        EmbarkBackButton(context),
         //FAB
         Align(
           alignment: Alignment.topRight,
           child: Container(
-              margin: EdgeInsets.only(right: 25.0, top: 35),
+              margin: EdgeInsets.only(right: 10, top: 10),
               child: FloatingActionButton(
                   elevation: 6,
-                  backgroundColor: EmbarkGray,
+                  backgroundColor: EmbarkExtraLightGray,
                   onPressed: () {
                     switch (controller.status) {
                       case AnimationStatus.completed:
@@ -143,10 +134,9 @@ class _FullPostcardPageState extends State<FullPostcardPage>
                             child: Icon(Icons.location_on,
                                 color: EmbarkAlmostBlack),
                             decoration: BoxDecoration(
-                                shape: BoxShape.circle, color: EmbarkGray)))
+                                shape: BoxShape.circle, color: EmbarkExtraLightGray)))
                   ]))),
-        ),
-        Align(alignment: Alignment.bottomCenter, child: FancyTabBar()),
+        )
       ]),
     );
   }

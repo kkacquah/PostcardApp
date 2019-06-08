@@ -10,7 +10,7 @@ class EmbarkBackButton extends StatelessWidget with PreferredSizeWidget {
   EmbarkBackButton(BuildContext context) {
     _icon = Icon(
       _getIconData(Theme.of(context).platform),
-      color: EmbarkGray,
+      color: EmbarkExtraLightGray,
       size: 24.0,
     );
   }

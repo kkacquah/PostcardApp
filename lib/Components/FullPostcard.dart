@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Services/PostcardInfo.dart';
+import 'package:embark/Components/Button.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:embark/Styles/Colors.dart';
@@ -24,8 +25,7 @@ class FullPostcard extends StatefulWidget {
   }
 }
 
-class _FullPostcardState extends State<FullPostcard>
-    {
+class _FullPostcardState extends State<FullPostcard> {
   final PostcardInfo _postcardInfo;
   AnimationController controller;
   Animation<Offset> offset;
@@ -33,9 +33,7 @@ class _FullPostcardState extends State<FullPostcard>
 
   _FullPostcardState(this._postcardInfo) {
     date = this._postcardInfo.timestamp.toDate();
-
   }
-
 
   Iterable<Widget> get tagWidgets sync* {
     bool filled = true;
@@ -47,25 +45,25 @@ class _FullPostcardState extends State<FullPostcard>
         yield Chip(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(500),
-              side: BorderSide(color: _postcardInfo.theme.secondary())),
+              side: BorderSide(color: _postcardInfo.theme.secondary)),
           backgroundColor: Colors.white,
           label: Text(tag.tag),
           labelStyle: TextStyle(
-            fontFamily: _postcardInfo.theme.fontFamily(),
+            fontFamily: _postcardInfo.fontFamily,
             fontWeight: FontWeight.w100,
-            color: _postcardInfo.theme.secondary(),
-            fontSize: 10,
+            color: _postcardInfo.theme.secondary,
+            fontSize: 12,
           ),
         );
       } else {
         yield Chip(
-          backgroundColor: _postcardInfo.theme.secondary(),
+          backgroundColor: _postcardInfo.theme.secondary,
           label: Text(tag.tag),
           labelStyle: TextStyle(
-            fontFamily: _postcardInfo.theme.fontFamily(),
+            fontFamily: _postcardInfo.fontFamily,
             fontWeight: FontWeight.w100,
             color: Colors.white,
-            fontSize: 10,
+            fontSize: 12,
           ),
         );
       }
@@ -79,14 +77,24 @@ class _FullPostcardState extends State<FullPostcard>
     return Stack(
       children: [
         Positioned(
-            bottom: 68,
+            bottom: 0,
             width: size.width,
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: EmbarkAlmostWhite,
+                boxShadow: [
+                  BoxShadow(
+                      color: EmbarkAlmostBlack.withOpacity(0.25),
+                      offset: new Offset(0, -2),
+                      blurRadius: 4)
+                ],
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(14.0),
+                    topRight: Radius.circular(14.0)),
+//                border: Border(top: BorderSide)
               ),
               child: Padding(
-                padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                padding: EdgeInsets.fromLTRB(size.width*0.075, 15, size.width*0.075, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -97,9 +105,9 @@ class _FullPostcardState extends State<FullPostcard>
                             Container(
                                 height: 45,
                                 margin: EdgeInsets.only(
-                                    top: 5, bottom: 5, left: 20, right: 15),
+                                    top: 5, bottom: 5,  right: 15),
                                 decoration: BoxDecoration(
-                                    color: EmbarkGray,
+                                    color: EmbarkExtraLightGray,
                                     boxShadow: [
                                       new BoxShadow(
                                           color: Colors.black26,
@@ -109,7 +117,7 @@ class _FullPostcardState extends State<FullPostcard>
                                     ],
                                     shape: BoxShape.circle,
                                     border: Border.all(
-                                        color: EmbarkGray, width: 1)),
+                                        color: EmbarkLightGray, width: 1)),
                                 child: ClipOval(
                                     child:
                                         Image.network(profile.user.photoUrl))),
@@ -122,10 +130,9 @@ class _FullPostcardState extends State<FullPostcard>
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                     fontSize: 24,
-                                    color: _postcardInfo.theme.secondary(),
+                                    color: _postcardInfo.theme.secondary,
                                     fontWeight: FontWeight.bold,
-                                    fontFamily:
-                                        _postcardInfo.theme.fontFamily())),
+                                    fontFamily: _postcardInfo.fontFamily)),
                             Row(
                               children: <Widget>[
                                 Icon(
@@ -142,8 +149,8 @@ class _FullPostcardState extends State<FullPostcard>
                                           fontSize: 14,
                                           color: Colors.grey,
                                           fontWeight: FontWeight.w200,
-                                          fontFamily: _postcardInfo.theme
-                                              .fontFamily())),
+                                          fontFamily:
+                                              _postcardInfo.fontFamily)),
                                 ),
                                 Icon(
                                   Icons.access_time,
@@ -151,77 +158,38 @@ class _FullPostcardState extends State<FullPostcard>
                                   size: 14,
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(2, 0, 2, 0),
-                                  child: Text(
-                                      " ${date.month}/${date.day}/${date.year}",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          color: Colors.grey,
-                                          fontWeight: FontWeight.w200,
-                                          fontFamily: _postcardInfo.theme
-                                              .fontFamily())),
-                                ),
+                                    padding: EdgeInsets.fromLTRB(2, 0, 2, 0),
+                                    child: Text(
+                                        " ${date.month}/${date.day}/${date.year}",
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.w200,
+                                            fontFamily:
+                                                _postcardInfo.fontFamily))),
                               ],
                             ),
                           ],
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
+                    Container(
                       child: Wrap(
                         spacing: 5,
                         runSpacing: -10,
                         children: tagWidgets.toList(),
                       ),
                     ),
-                    Padding(
-                        padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
+                    Container(
+                        padding: EdgeInsets.only(bottom:30),
                         child: Text(_postcardInfo.status,
                             style: TextStyle(
-                                fontSize: 12,
-                                color: _postcardInfo.theme.primary(),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: _postcardInfo.theme.primary,
                                 height: 1,
-                                fontFamily: _postcardInfo.theme.fontFamily()))),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Spacer(flex: 2),
-                          FlatButton.icon(
-                            onPressed: () {},
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            textColor: Colors.white,
-                            color: _postcardInfo.theme.secondary(),
-                            icon: Icon(
-                              Icons.bookmark,
-                              color: Colors.white,
-                              size: 16,
-                            ),
-                            label: Text('Save'),
-                          ),
-                          Spacer(),
-                          OutlineButton.icon(
-                            onPressed: () {},
-                            borderSide: BorderSide(
-                                color: _postcardInfo.theme.secondary()),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            textColor: _postcardInfo.theme.secondary(),
-                            icon: Icon(
-                              Icons.share,
-                              color: _postcardInfo.theme.secondary(),
-                              size: 16,
-                            ),
-                            label: Text('Share'),
-                          ),
-                          Spacer(flex: 2),
-                        ],
-                      ),
-                    ),
+                                fontFamily: _postcardInfo.fontFamily))),
                   ],
                 ),
               ),

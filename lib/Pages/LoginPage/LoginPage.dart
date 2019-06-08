@@ -11,13 +11,11 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 //Render home Screen
 class LoginPage extends StatefulWidget {
-  List<EmbarkTheme> _themes;
+  final List<EmbarkTheme> _themes;
+  final List<String> _fonts;
 
   //Set Using Themes
-  LoginPage(List<EmbarkTheme> themes) {
-    this._themes = themes;
-  }
-
+  LoginPage(this._themes,this._fonts);
   @override
   __LoginPageState createState() => __LoginPageState();
 }
@@ -58,7 +56,7 @@ class __LoginPageState extends State<LoginPage> {
   Widget _loadingLogin(BuildContext context){
     if (this._loginLoading){
       return SpinKitRing(
-        color: widget._themes[_card].secondary().withOpacity(0.7),
+        color: widget._themes[_card].secondary.withOpacity(0.7),
         size: 40.0,
       );
     } else {
@@ -67,19 +65,23 @@ class __LoginPageState extends State<LoginPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             EmbarkIconButton(
+
                 facebookTheme,
                     () => _loginFacebook(context),
                 " Facebook",
                 true,
                 EdgeInsets.symmetric(horizontal: 15),
-                facebookIcon),
+                iconData: facebook,
+                fractionalWidth: 0.42),
             EmbarkIconButton(
+
                 googleTheme,
                     () => _loginGoogle(context),
                 " Google",
                 true,
                 EdgeInsets.symmetric(horizontal: 15),
-                googleIcon)
+                iconData: google,
+                fractionalWidth: 0.42)
           ]);
     }
   }
@@ -124,8 +126,7 @@ class __LoginPageState extends State<LoginPage> {
                                         'HelloFrom',
                                         textAlign: TextAlign.center,
                                         style: new TextStyle(
-                                            fontFamily: widget._themes[_card]
-                                                .fontFamily(),
+                                            fontFamily: widget._fonts[_card],
                                             fontWeight: FontWeight.w700,
                                             fontSize: 36.0,
                                             color: EmbarkSurfaceWhite),
@@ -134,8 +135,7 @@ class __LoginPageState extends State<LoginPage> {
                                         'Share your journeys with the world.',
                                         textAlign: TextAlign.center,
                                         style: new TextStyle(
-                                            fontFamily: widget._themes[_card]
-                                                .fontFamily(),
+                                            fontFamily: widget._fonts[_card],
                                             fontWeight: FontWeight.w200,
                                             fontSize: 20.0,
                                             color: EmbarkSurfaceWhite),
@@ -168,7 +168,7 @@ class __LoginPageState extends State<LoginPage> {
                                       flex: 1,
                                       child: Container(
                                           color:
-                                              widget._themes[_card].primary(),
+                                              widget._themes[_card].primary,
                                           height: 1)),
                                   Container(
                                       margin:
@@ -178,13 +178,13 @@ class __LoginPageState extends State<LoginPage> {
                                               fontFamily: "Montserrat",
                                               fontWeight: FontWeight.w500,
                                               color: widget._themes[_card]
-                                                  .primary(),
+                                                  .primary,
                                               fontSize: 12))),
                                   Expanded(
                                       flex: 1,
                                       child: Container(
                                           color:
-                                              widget._themes[_card].primary(),
+                                              widget._themes[_card].primary,
                                           height: 1)),
                                 ]),
                           ),

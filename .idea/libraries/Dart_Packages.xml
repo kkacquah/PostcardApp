@@ -12,7 +12,7 @@
         <entry key="async">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.2.0/lib" />
+              <option value="$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -198,6 +198,13 @@
             </list>
           </value>
         </entry>
+        <entry key="keyboard_visibility">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/keyboard_visibility-0.5.6/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="logging">
           <value>
             <list>
@@ -264,7 +271,7 @@
         <entry key="quiver">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/quiver-2.0.3/lib" />
+              <option value="$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/quiver-2.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -320,7 +327,7 @@
         <entry key="test_api">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.5/lib" />
+              <option value="$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.4/lib" />
             </list>
           </value>
         </entry>
@@ -349,7 +356,7 @@
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/animated_text_kit-1.3.0/lib" />
-      <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.2.0/lib" />
+      <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/boolean_selector-1.0.4/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/catcher-0.0.12/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/charcode-1.1.2/lib" />
@@ -374,6 +381,7 @@
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http-0.12.0+2/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http_parser-3.1.3/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/intl-0.15.8/lib" />
+      <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/keyboard_visibility-0.5.6/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/logging-0.11.3+2/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/mailer-2.3.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/matcher-0.12.5/lib" />
@@ -383,14 +391,14 @@
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/path-1.6.2/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/pedantic-1.5.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/platform-2.2.0/lib" />
-      <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/quiver-2.0.3/lib" />
+      <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/quiver-2.0.2/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/rxdart-0.22.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/source_span-1.5.5/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/stream_channel-2.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/string_scanner-1.0.4/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/term_glyph-1.1.0/lib" />
-      <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.5/lib" />
+      <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.4/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/transparent_image-1.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib" />
