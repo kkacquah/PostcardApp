@@ -127,11 +127,11 @@ class _FullPostcardPageState extends State<FullPostcardPage>
                   },
 
                   child: Stack(children: [
-                    Icon(Icons.photo, color: EmbarkAlmostBlack),
+                    Icon(Icons.location_on, color: EmbarkAlmostBlack),
                     FadeTransition(
                         opacity: this._fadeOutAnimation,
                         child: Container(
-                            child: Icon(Icons.location_on,
+                            child: Icon(Icons.photo,
                                 color: EmbarkAlmostBlack),
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle, color: EmbarkExtraLightGray)))

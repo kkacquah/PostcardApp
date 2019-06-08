@@ -18,21 +18,14 @@ class AddPhoto extends StatelessWidget {
         child: Align(
             alignment: Alignment.topRight,
             child: Container(
-                child: GestureDetector(
-                    onTap: this._handleAddPhoto,
-                    child: Container(
-                        height: 50,
-                        width: 50 * (2 / 3) + 90,
-                        decoration: BoxDecoration(
-                            color: EmbarkExtraLightGray,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: EmbarkAlmostBlack.withOpacity(0.25),
-                                  offset: new Offset(2, 2),
-                                  blurRadius: 4)
-                            ],
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(50))),
+                height: 50,
+                width: 50 * (2 / 3) + 90,
+                child: MaterialButton(
+                    padding: EdgeInsets.all(0),
+                    elevation: 1.0,
+                    color: EmbarkExtraLightGray,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
+                    onPressed: this._handleAddPhoto,
                         child: Center(
                             child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -50,7 +43,7 @@ class AddPhoto extends StatelessWidget {
                                             fontSize: 14,
                                             color: EmbarkAlmostBlack))))
                           ],
-                        )))))));
+                        ))))));
   }
 }
 

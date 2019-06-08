@@ -45,26 +45,31 @@ class _FontPickerState extends State<FontPicker> {
       }
     }
   }
-  Widget _getFontName(){
-    if(!widget.longPressed){
-      return Container(width: 75,child:Text("Font",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontFamily: "OpenSans",
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: EmbarkAlmostBlack)));
-    } else {
-      return Container(width: 150,child:Text(EmbarkFonts.names[widget.fontID],
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontFamily: "OpenSans",
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: EmbarkAlmostBlack)));
-    }
 
+  Widget _getFontName() {
+    if (!widget.longPressed) {
+      return Container(
+          width: 75,
+          child: Text("Font",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: EmbarkAlmostBlack)));
+    } else {
+      return Container(
+          width: 150,
+          child: Text(EmbarkFonts.names[widget.fontID],
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: EmbarkAlmostBlack)));
+    }
   }
+
   _onDragUpdate(BuildContext context, DragUpdateDetails update) {
     RenderBox getBox = context.findRenderObject();
     var local = getBox.globalToLocal(update.globalPosition);
@@ -81,7 +86,6 @@ class _FontPickerState extends State<FontPicker> {
     //ADDED DELAY
   }
 
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -97,6 +101,7 @@ class _FontPickerState extends State<FontPicker> {
                         _onDragUpdate(context, update),
                     onHorizontalDragStart: _onDragStart,
                     onHorizontalDragEnd: (LongPressEndDetails) {
+                      print("drag ended");
                       setState(() {
                         widget.height = 50;
                         widget.width = 50 * (2 / 3) + 90;
@@ -108,30 +113,23 @@ class _FontPickerState extends State<FontPicker> {
                         duration: Duration(milliseconds: 300),
                         height: widget.height,
                         width: widget.width,
-                        decoration: BoxDecoration(
+                        child: Material(
                             color: EmbarkExtraLightGray,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: EmbarkAlmostBlack.withOpacity(0.25),
-                                  offset: new Offset(2, 2),
-                                  blurRadius: 4)
-                            ],
-                            borderRadius:
-                            BorderRadius.all(Radius.circular(50))),
-                        child: Center(child:SingleChildScrollView(
-
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                _FontPickerPainter(
-                                    longPressed: widget.longPressed,
-                                    height: 50,
-                                    fontID: widget.fontID),
-                                Container(
-                                    child: _getFontName())
-                              ],
-                            ))))))));
+                            elevation: 1.0,
+                            borderRadius: BorderRadius.all(Radius.circular(50)),
+                            child: Center(
+                                child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        _FontPickerPainter(
+                                            longPressed: widget.longPressed,
+                                            height: 50,
+                                            fontID: widget.fontID),
+                                        Container(child: _getFontName())
+                                      ],
+                                    )))))))));
   }
 }
 
@@ -173,7 +171,9 @@ class _ThemePickerPainterState extends State<_FontPickerPainter>
           height: widget.heights[i] / 2,
           width: widget.heights[i] / 2,
           child: CustomPaint(
-              foregroundPainter: FontPainter(fontStyle: EmbarkFonts.fonts[i],yOffset:EmbarkFonts.yOffsets[i]))));
+              foregroundPainter: FontPainter(
+                  fontStyle: EmbarkFonts.fonts[i],
+                  yOffset: EmbarkFonts.yOffsets[i]))));
     }
     return row;
   }
@@ -186,8 +186,9 @@ class _ThemePickerPainterState extends State<_FontPickerPainter>
           height: widget.height / 2,
           width: widget.height / 2,
           child: CustomPaint(
-              foregroundPainter:
-              FontPainter(fontStyle: EmbarkFonts.fonts[widget.fontID],yOffset: EmbarkFonts.yOffsets[widget.fontID])));
+              foregroundPainter: FontPainter(
+                  fontStyle: EmbarkFonts.fonts[widget.fontID],
+                  yOffset: EmbarkFonts.yOffsets[widget.fontID])));
     } else {
       return Row(children: _generateFonts());
     }

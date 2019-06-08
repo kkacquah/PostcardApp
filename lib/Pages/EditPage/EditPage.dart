@@ -13,7 +13,7 @@ import 'package:embark/Services/profile.dart';
 import 'dart:ui';
 
 class EditPostcardPage extends StatefulWidget {
-  PostcardInfo postcardInfo = PostcardInfo();
+
 
 
   @override
@@ -25,36 +25,10 @@ class EditPostcardPage extends StatefulWidget {
   }
 }
 
-class _EditPostcardPageState extends State<EditPostcardPage> {
-  bool _inputFocused;
-  double _getOpacity(){
-    print(this._inputFocused);
-    return this._inputFocused ? 0.0 : 1.0;
-  }
-  KeyboardVisibilityNotification _keyboardVisibility = new KeyboardVisibilityNotification();
-  int _keyboardVisibilitySubscriberId;
-
-  @protected
-  void initState() {
-    super.initState();
-    print("state initialized");
-
-    _inputFocused = _keyboardVisibility.isKeyboardVisible;
-    _keyboardVisibilitySubscriberId = _keyboardVisibility.addNewListener(
-        onChange: (bool visible) {
-          print("made a state change");
-          this._inputFocused = visible;
-        }
-    );
-  }
-
-  @override
-  void dispose() {
-    // Clean up the focus node when the Form is disposed
-    _keyboardVisibility.removeListener(_keyboardVisibilitySubscriberId);
-    super.dispose();
-  }
+class _EditPostcardPageState extends State<EditPostcardPage>{
+  final PostcardInfo postcardInfo = PostcardInfo();
   Widget build(BuildContext context) {
+
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -84,24 +58,24 @@ class _EditPostcardPageState extends State<EditPostcardPage> {
                       ThemePicker(
                           onSaved: (int themeID) {
                             setState(() {
-                              widget.postcardInfo.themeID = themeID;
-                              widget.postcardInfo.theme =
+                              this.postcardInfo.themeID = themeID;
+                              this.postcardInfo.theme =
                                   EmbarkThemes.themes[themeID];
                             });
                           },
-                          themeID: widget.postcardInfo.themeID),
+                          themeID: this.postcardInfo.themeID),
                       FontPicker(
                           onSaved: (int fontID) {
                             setState(() {
-                              widget.postcardInfo.fontID = fontID;
-                              widget.postcardInfo.fontFamily =
+                              this.postcardInfo.fontID = fontID;
+                              this.postcardInfo.fontFamily =
                                   EmbarkFonts.fonts[fontID];
                             });
                           },
-                          fontID: widget.postcardInfo.fontID),
+                          fontID: this.postcardInfo.fontID),
                       AddPhoto((){})
                     ]))),
-            EditCard(widget.postcardInfo.theme, widget.postcardInfo.fontFamily),
+            EditCard(this.postcardInfo.theme, this.postcardInfo.fontFamily),
           ],
         ),
       ],

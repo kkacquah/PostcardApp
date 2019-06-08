@@ -22,7 +22,7 @@ class Profile {
   }
 
   // constructor
-  void _intializeUser(FirebaseUser userFirebase) async {
+  Future<void> _initializeUser(FirebaseUser userFirebase) async {
     this.user = userFirebase;
     DocumentReference ref = _db.collection('users').document(user.uid);
     //update email, photoUrl, displayName, and last seen
@@ -51,13 +51,13 @@ class Profile {
 
   facebookSignIn() async {
     FirebaseUser user = await _authService.facebookSignIn();
-    await _intializeUser(user);
+    await _initializeUser(user);
   }
 
   googleSignIn() async {
     // initializes profile with information from google sign-in
     FirebaseUser user = await _authService.googleSignIn();
-    await _intializeUser(user);
+    await _initializeUser(user);
   }
 
   Future<List<PostcardInfo>> _queryPostcards(

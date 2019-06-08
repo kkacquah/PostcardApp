@@ -45,26 +45,31 @@ class _ThemePickerState extends State<ThemePicker> {
       }
     }
   }
-  Widget _getThemeName(){
-    if(!widget.longPressed){
-      return Container(width: 75,child:Text("Theme",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontFamily: "OpenSans",
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: EmbarkAlmostBlack)));
-    } else {
-      return Container(width: 75,child:Text(EmbarkThemes.themes[widget.themeID].name,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontFamily: "OpenSans",
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: EmbarkAlmostBlack)));
-    }
 
+  Widget _getThemeName() {
+    if (!widget.longPressed) {
+      return Container(
+          width: 75,
+          child: Text("Theme",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: EmbarkAlmostBlack)));
+    } else {
+      return Container(
+          width: 75,
+          child: Text(EmbarkThemes.themes[widget.themeID].name,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: EmbarkAlmostBlack)));
+    }
   }
+
   _onDragUpdate(BuildContext context, DragUpdateDetails update) {
     RenderBox getBox = context.findRenderObject();
     var local = getBox.globalToLocal(update.globalPosition);
@@ -115,31 +120,27 @@ class _ThemePickerState extends State<ThemePicker> {
                         duration: Duration(milliseconds: 300),
                         height: widget.height,
                         width: widget.width,
-                        decoration: BoxDecoration(
-                            color: EmbarkExtraLightGray,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: EmbarkAlmostBlack.withOpacity(0.25),
-                                  offset: new Offset(2, 2),
-                                  blurRadius: 4)
-                            ],
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(50))),
-                        child: Center(child:SingleChildScrollView(
 
-                          scrollDirection: Axis.horizontal,
-                            child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            _ThemePickerPainter(
-                                longPressed: widget.longPressed,
-                                height: 50,
-                                themeID: widget.themeID),
-                            Container(
-                              //TODO support theme names
-                                child: _getThemeName())
-                          ],
-                        ))))))));
+                        child: Material(
+                                color: EmbarkExtraLightGray,
+                                elevation: 1.0,
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(50)),
+                            child: Center(
+                                child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        _ThemePickerPainter(
+                                            longPressed: widget.longPressed,
+                                            height: 50,
+                                            themeID: widget.themeID),
+                                        Container(
+                                            //TODO support theme names
+                                            child: _getThemeName())
+                                      ],
+                                    )))))))));
   }
 }
 

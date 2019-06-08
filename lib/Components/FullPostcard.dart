@@ -100,28 +100,17 @@ class _FullPostcardState extends State<FullPostcard> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Column(
-                          children: <Widget>[
-                            Container(
+                        Container(
+
                                 height: 45,
                                 margin: EdgeInsets.only(
                                     top: 5, bottom: 5,  right: 15),
-                                decoration: BoxDecoration(
-                                    color: EmbarkExtraLightGray,
-                                    boxShadow: [
-                                      new BoxShadow(
-                                          color: Colors.black26,
-                                          offset: new Offset(1, 1),
-                                          blurRadius: 4.0,
-                                          spreadRadius: 1)
-                                    ],
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                        color: EmbarkLightGray, width: 1)),
-                                child: ClipOval(
+                                child: Material(
+                                    elevation: 1.0,
+                                    shape: CircleBorder(side:BorderSide(color: EmbarkLightGray, width: 1)),
+                                    child:ClipOval(
                                     child:
                                         Image.network(profile.user.photoUrl))),
-                          ],
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

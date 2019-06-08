@@ -1,6 +1,6 @@
 import 'package:embark/Styles/Colors.dart';
 import 'package:flutter/material.dart';
-import 'package:embark/services/authentication.dart';
+import 'package:embark/services/profile.dart';
 
 class EmbarkAppBar extends StatelessWidget with PreferredSizeWidget {
   String _photoUrl;
