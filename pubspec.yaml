@@ -29,6 +29,13 @@ dependencies:
   image_picker:
   http: 0.12.0+2
   transparent_image: 1.0.0
+<<<<<<< HEAD
+=======
+  flutter_spinkit: ^3.1.0
+  catcher: ^0.0.8
+  google_maps_flutter: 0.5.14+1
+  keyboard_visibility: ^0.5.2
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
 
   rxdart: 0.22.0
   flutter:
@@ -60,6 +67,10 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: fonts/Montserrat/Montserrat-Medium.ttf
+<<<<<<< HEAD
+=======
+          weight: 500
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
         - asset: fonts/Montserrat/Montserrat-Bold.ttf
           weight: 700
         - asset: fonts/Montserrat/Montserrat-Black.ttf
@@ -81,6 +92,11 @@ flutter:
     - family: OpenSans
       fonts:
         - asset: fonts/OpenSans/OpenSans-Regular.ttf
+<<<<<<< HEAD
+=======
+        - asset: fonts/OpenSans/OpenSans-SemiBold.ttf
+          weight: 500
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
         - asset: fonts/OpenSans/OpenSans-Bold.ttf
           weight: 700
         - asset: fonts/OpenSans/OpenSans-ExtraBold.ttf

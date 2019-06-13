@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:lib/Pages/LoginPage/LoginPageUtil.dart
 import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Styles/Themes.dart';
 import 'package:embark/Components/LoginPostcard.dart';
 import 'package:embark/Services/PostcardInfo.dart';
+=======
+import 'package:embark/Styles/Themes.dart';
+import 'package:embark/Components/LoginPostcard.dart';
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1:lib/Pages/LoginPage/LoginPageUtil.dart
 import 'dart:math';
 
 //list of pages to scroll through
@@ -18,7 +23,7 @@ class PageList {
 
   List<Widget> getBackgrounds() {
     List<Widget> backgrounds = new List(_pages.length);
-    for (var i = 0; i < themes.length; i++) {
+    for (var i = 0; i < EmbarkThemes.themes.length; i++) {
       backgrounds[i] = _pages[i].getBackground();
     }
     return backgrounds;
@@ -26,7 +31,7 @@ class PageList {
 
   List<Widget> getCards() {
     List<Widget> cards = new List(_pages.length);
-    for (var i = 0; i < themes.length; i++) {
+    for (var i = 0; i < EmbarkThemes.themes.length; i++) {
       cards[i] = _pages[i].getCard();
     }
     return cards;

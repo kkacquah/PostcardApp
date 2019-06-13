@@ -9,12 +9,30 @@ class EmbarkIconButton extends StatelessWidget {
   final String _text;
   final bool _outline;
   final EdgeInsets _margin;
-  final Icon _icon;
+  final IconData iconData;
+  Icon icon;
+  final double fractionalWidth;
+  double width;
+  final double fontSize;
+  final double elevation;
+  final String fontFamily;
 
   //TODO ALLOW changing of fontsize
   EmbarkIconButton(
-      this._theme, this._onPressed, this._text, this._outline, this._margin,this._icon);
+      this._theme, this._onPressed, this._text, this._outline, this._margin,
+      {this.iconData,
+      this.fontSize = 22,
+        this.width,
+      this.fontFamily = "OpenSans",
+        this.fractionalWidth = 0.4,
+      this.elevation = 1}) {
+    if (this.iconData != null) {
+      this.icon = Icon(this.iconData,
+          size: this.fontSize + 2,
+          color: this._outline ? _theme.secondary : EmbarkAlmostWhite);
+    }
 
+<<<<<<< HEAD
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     if (_outline) {
@@ -39,84 +57,87 @@ class EmbarkIconButton extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
                         color: _theme.secondary()))
+=======
+  }
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
 
-              ]),
-              color: _theme.secondary()));
+  List<Widget> _innerWidget() {
+    if (this.icon == null) {
+      return <Widget>[
+        Padding(
+            padding: EdgeInsets.only(bottom: 2.5),
+            child: Text(this._text,
+                style: TextStyle(
+                    height: 1,
+                    fontFamily: this.fontFamily,
+                    fontWeight: FontWeight.w700,
+                    fontSize: this.fontSize,
+                    color: (this._outline
+                        ? _theme.secondary
+                        : EmbarkAlmostWhite))))
+      ];
     } else {
-      return Container(
-          margin: this._margin,
-          width: size.width * (3 / 8),
-          height: 50,
-          child: MaterialButton(
-              elevation: 0,
-              height: 50,
-              splashColor: _theme.primary(),
-              shape: new RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(25)),
-              onPressed: _onPressed,
-              child: Text(this._text,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      color: EmbarkSurfaceWhite)),
-              color: _theme.secondary()));
+      return <Widget>[
+        icon,
+        Padding(
+            padding: EdgeInsets.only(bottom: 2.5),
+            child: Text(this._text,
+                style: TextStyle(
+                    height: 1,
+                    fontFamily: this.fontFamily,
+                    fontWeight: FontWeight.w700,
+                    fontSize: this.fontSize,
+                    color: (this._outline
+                        ? _theme.secondary
+                        : EmbarkAlmostWhite))))
+      ];
     }
   }
-}
-
-class EmbarkButton extends StatelessWidget {
-  final EmbarkTheme _theme;
-  final Function _onPressed;
-  final String _text;
-  final bool _outline;
-  final EdgeInsets _margin;
-
-  //TODO ALLOW changing of fontsize
-  EmbarkButton(
-      this._theme, this._onPressed, this._text, this._outline, this._margin);
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    if (this.width == null) {
+      this.width = size.width * this.fractionalWidth;
+    }
     if (_outline) {
       return Container(
           margin: this._margin,
-          width: size.width * (3 / 8),
-          height: 50,
-          child: OutlineButton(
+          width: this.width,
+          height: 45,
+          child: MaterialButton(
+              elevation: this.elevation,
               shape: new RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(25),
+                side: BorderSide(color: _theme.secondary),
+                borderRadius: new BorderRadius.circular(6),
               ),
               onPressed: _onPressed,
-              splashColor: _theme.primary(),
-              borderSide: BorderSide(color: _theme.secondary()),
-              child: Text(this._text,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      color: _theme.secondary())),
-              color: _theme.secondary()));
+              splashColor: _theme.primary,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: this._innerWidget()),
+              color: EmbarkAlmostWhite));
     } else {
       return Container(
           margin: this._margin,
-          width: size.width * (3 / 8),
-          height: 50,
+          width: this.width,
+          height: 45,
           child: MaterialButton(
-              elevation: 0,
-              height: 50,
-              splashColor: _theme.primary(),
+              elevation: this.elevation,
+              splashColor: _theme.primary,
               shape: new RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(25)),
+                  borderRadius: new BorderRadius.circular(6)),
               onPressed: _onPressed,
-              child: Text(this._text,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      color: EmbarkSurfaceWhite)),
-              color: _theme.secondary()));
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: _innerWidget()),
+              color: _theme.secondary));
     }
   }
 }
 
+<<<<<<< HEAD
 class EmbarkButtonGradient extends StatelessWidget {
   final EmbarkTheme _theme;
   final Function _onPressed;
@@ -183,3 +204,5 @@ class EmbarkButtonGradient extends StatelessWidget {
     }
   }
 }
+=======
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1

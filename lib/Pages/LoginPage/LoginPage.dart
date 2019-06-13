@@ -3,12 +3,16 @@ import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Styles/Themes.dart';
 import 'LoginPageUtil.dart';
 import 'package:embark/Pages/PostcardPage/MyPostcardsPage.dart';
+<<<<<<< HEAD
 import 'package:embark/Pages/PostcardPage/PostcardPage.dart';
 import 'package:embark/Pages/EditPostcardPage/EditPostcardPage.dart';
+=======
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
 import 'package:embark/Components/Button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:embark/Services/profile.dart';
 import 'package:embark/Styles/Icons.dart';
+<<<<<<< HEAD
 
 //Render home Screen
 class LoginPage extends StatefulWidget {
@@ -19,6 +23,17 @@ class LoginPage extends StatefulWidget {
     this._themes = themes;
   }
 
+=======
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
+//Render home Screen
+class LoginPage extends StatefulWidget {
+  final List<EmbarkTheme> _themes;
+  final List<String> _fonts;
+
+  //Set Using Themes
+  LoginPage(this._themes,this._fonts);
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
   @override
   __LoginPageState createState() => __LoginPageState();
 }
@@ -29,6 +44,7 @@ class __LoginPageState extends State<LoginPage> {
   PageController _cardController = new PageController(); // for each scrollables
   int _card = 0;
   double _titleOpacity = 1;
+<<<<<<< HEAD
   int AnimationDuration = 400;
 
   @override
@@ -55,6 +71,72 @@ class __LoginPageState extends State<LoginPage> {
     }
 
     ;
+=======
+  bool _loginLoading =false;
+  int AnimationDuration = 400;
+
+  void login(BuildContext context) {
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MyPostcardsPage()),
+    );
+    setState(() {
+      _loginLoading = false;
+    });
+  }
+  void _loginFacebook(BuildContext context) async{
+    setState(() {
+      _loginLoading = true;
+    });
+    await profile.facebookSignIn();
+    login(context);
+  }
+  void _loginGoogle(BuildContext context) async{
+    setState(() {
+        _loginLoading = true;
+    });
+    await profile.googleSignIn();
+    login(context);
+  }
+  Widget _loadingLogin(BuildContext context){
+    if (this._loginLoading){
+      return SpinKitRing(
+        color: widget._themes[_card].secondary.withOpacity(0.7),
+        size: 40.0,
+      );
+    } else {
+      return Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            EmbarkIconButton(
+
+                facebookTheme,
+                    () => _loginFacebook(context),
+                " Facebook",
+                true,
+                EdgeInsets.symmetric(horizontal: 15),
+                iconData: facebook,
+                fractionalWidth: 0.42),
+            EmbarkIconButton(
+
+                googleTheme,
+                    () => _loginGoogle(context),
+                " Google",
+                true,
+                EdgeInsets.symmetric(horizontal: 15),
+                iconData: google,
+                fractionalWidth: 0.42)
+          ]);
+    }
+  }
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    PageList pages = PageList(widget._themes, size);
+
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         body: NotificationListener<ScrollNotification>(
@@ -91,8 +173,12 @@ class __LoginPageState extends State<LoginPage> {
                                         'HelloFrom',
                                         textAlign: TextAlign.center,
                                         style: new TextStyle(
+<<<<<<< HEAD
                                             fontFamily: widget._themes[_card]
                                                 .fontFamily(),
+=======
+                                            fontFamily: widget._fonts[_card],
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
                                             fontWeight: FontWeight.w700,
                                             fontSize: 36.0,
                                             color: EmbarkSurfaceWhite),
@@ -101,8 +187,12 @@ class __LoginPageState extends State<LoginPage> {
                                         'Share your journeys with the world.',
                                         textAlign: TextAlign.center,
                                         style: new TextStyle(
+<<<<<<< HEAD
                                             fontFamily: widget._themes[_card]
                                                 .fontFamily(),
+=======
+                                            fontFamily: widget._fonts[_card],
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
                                             fontWeight: FontWeight.w200,
                                             fontSize: 20.0,
                                             color: EmbarkSurfaceWhite),
@@ -135,7 +225,11 @@ class __LoginPageState extends State<LoginPage> {
                                       flex: 1,
                                       child: Container(
                                           color:
+<<<<<<< HEAD
                                               widget._themes[_card].primary(),
+=======
+                                              widget._themes[_card].primary,
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
                                           height: 1)),
                                   Container(
                                       margin:
@@ -145,18 +239,27 @@ class __LoginPageState extends State<LoginPage> {
                                               fontFamily: "Montserrat",
                                               fontWeight: FontWeight.w500,
                                               color: widget._themes[_card]
+<<<<<<< HEAD
                                                   .primary(),
+=======
+                                                  .primary,
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
                                               fontSize: 12))),
                                   Expanded(
                                       flex: 1,
                                       child: Container(
                                           color:
+<<<<<<< HEAD
                                               widget._themes[_card].primary(),
+=======
+                                              widget._themes[_card].primary,
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
                                           height: 1)),
                                 ]),
                           ),
                           Container(
                             height: 50,
+<<<<<<< HEAD
                             child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -176,6 +279,9 @@ class __LoginPageState extends State<LoginPage> {
                                       EdgeInsets.symmetric(horizontal: 15),
                                       googleIcon)
                                 ]),
+=======
+                            child:_loadingLogin(context)
+>>>>>>> c61d9e111f67ca40237d9a670fdcbbec38c1bed1
                           )
                         ]))
                   ])

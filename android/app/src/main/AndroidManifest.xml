@@ -11,6 +11,7 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="embark"
         android:icon="@mipmap/ic_launcher">
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -48,5 +49,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAGHHdtgnUNx_lgpKGn4hIoRcFxJzzVElo"/>
     </application>
 </manifest>

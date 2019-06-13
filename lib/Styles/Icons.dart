@@ -3,9 +3,10 @@ import 'package:embark/Styles/Colors.dart';
 
 final locationOn = Icon(
   Icons.location_on,
-  color: EmbarkGray,
+  color: EmbarkExtraLightGray,
   size: 10.0,
 );
+
 const IconData facebook = const IconData(0xf09a, fontFamily: "BrandIcons");
 const IconData google = const IconData(0xf1a0, fontFamily: "BrandIcons");
 final facebookIcon = Icon(
