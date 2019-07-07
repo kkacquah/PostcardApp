@@ -99,8 +99,8 @@ class EmbarkFonts {
     "Open Sans"
   ];
   static List<String> fonts = [
-    "PlayfairDisplay",
-    "RobotoMono",
+    "Montserrat",
+    "MontserratAlternates",
     "Montserrat",
     "MontserratAlternates",
     "OpenSans"

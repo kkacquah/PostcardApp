@@ -29,10 +29,17 @@ dependencies:
   transparent_image: 1.0.0
   flutter_spinkit: ^3.1.0
   catcher: ^0.0.8
+  location: any
   google_maps_flutter: 0.5.14+1
+  google_maps_webservice: ^0.0.14
   keyboard_visibility: ^0.5.2
-
+  flutter_google_places: 0.2.3
+  geocoder: 0.1.2
+  image_picker: 0.6.0+9
+  line_icons: ^0.2.0
+  photo_view: ^0.3.3
   rxdart: 0.22.0
+  dotted_border: 0.1.1
   flutter:
     sdk: flutter
 

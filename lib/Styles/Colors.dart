@@ -5,6 +5,8 @@ const EmbarkBackgroundWhite = Colors.white;
 const EmbarkAlmostBlack = const Color(0xFF282828);
 const EmbarkExtraLightGray = const Color(0xFFF7F7F5);
 const EmbarkAlmostWhite= const Color(0xFFFFFCFC);
+const EmbarkGray= const Color(0xFF727272);
+const EmbarkMediumGray = const Color(0xFF8c8c8c);
 const EmbarkLightGray = const Color(0xFFD8D8D8);
 const Transparent = const Color(0x00000000);
 

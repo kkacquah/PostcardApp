@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:embark/Styles/Themes.dart';
-import 'package:embark/Components/LoginPostcard.dart';
+import 'package:embark/Pages/LoginPage/Components/LoginPostcard.dart';
 import 'dart:math';
 
 //list of pages to scroll through

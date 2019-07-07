@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Styles/Themes.dart';
 import 'LoginPageUtil.dart';
-import 'package:embark/Pages/PostcardPage/MyPostcardsPage.dart';
-import 'package:embark/Components/Button.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:embark/Services/profile.dart';
+import 'package:embark/Pages/ScrapbookPhotoViewPage/ScrapbookPhotoViewPage.dart';
+//TODO: GET THE BOTTONS BACK
+import 'package:embark/Services/Profile.dart';
 import 'package:embark/Styles/Icons.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -33,7 +32,7 @@ class __LoginPageState extends State<LoginPage> {
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => MyPostcardsPage()),
+      MaterialPageRoute(builder: (context) => ScrapbookPhotoViewPage()),
     );
     setState(() {
       _loginLoading = false;
@@ -64,24 +63,24 @@ class __LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            EmbarkIconButton(
-
-                facebookTheme,
-                    () => _loginFacebook(context),
-                " Facebook",
-                true,
-                EdgeInsets.symmetric(horizontal: 15),
-                iconData: facebook,
-                fractionalWidth: 0.42),
-            EmbarkIconButton(
-
-                googleTheme,
-                    () => _loginGoogle(context),
-                " Google",
-                true,
-                EdgeInsets.symmetric(horizontal: 15),
-                iconData: google,
-                fractionalWidth: 0.42)
+//            EmbarkIconButton(
+//
+//                facebookTheme,
+//                    () => _loginFacebook(context),
+//                " Facebook",
+//                true,
+//                EdgeInsets.symmetric(horizontal: 15),
+//                iconData: facebook,
+//                fractionalWidth: 0.42),
+//            EmbarkIconButton(
+//
+//                googleTheme,
+//                    () => _loginGoogle(context),
+//                " Google",
+//                true,
+//                EdgeInsets.symmetric(horizontal: 15),
+//                iconData: google,
+//                fractionalWidth: 0.42)
           ]);
     }
   }
