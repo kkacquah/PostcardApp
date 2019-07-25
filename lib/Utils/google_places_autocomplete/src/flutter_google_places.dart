@@ -253,7 +253,7 @@ class _AppBarPlacesAutoCompleteTextFieldState
 
             Container(
                 decoration: BoxDecoration(
-                    color: EmbarkAlmostWhite,
+                    color: EmbarkColors.white,
                     borderRadius: BorderRadius.all(Radius.circular(6))),
                 height: 45,
                 child: Row(crossAxisAlignment: CrossAxisAlignment.center,children: <Widget>[
@@ -261,18 +261,18 @@ class _AppBarPlacesAutoCompleteTextFieldState
                       child: TextField(
                           controller: state._queryTextController,
                           autofocus: true,
-                          style: TextStyle(color: EmbarkAlmostBlack, fontFamily: "OpenSans", fontSize: 16),
+                          style: TextStyle(color: EmbarkColors.black, fontFamily: "OpenSans", fontSize: 16),
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: 'Where did this happen?'))),
                   Container(
                       width: 1,
-                      color: EmbarkLightGray,
+                      color: EmbarkColors.lightGray,
                       margin: EdgeInsets.symmetric(vertical: 10)),
                   Container(
                       child: Center(
                           child: IconButton(
-                    icon: Icon(Icons.my_location, color: EmbarkGray, size: 20),
+                    icon: Icon(Icons.my_location, color: EmbarkColors.gray, size: 20),
                     onPressed: () {},
                   )))
                 ])));

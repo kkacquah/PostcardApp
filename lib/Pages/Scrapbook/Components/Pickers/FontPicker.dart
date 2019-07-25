@@ -1,20 +1,24 @@
+import 'package:embark/Styles/Fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:embark/Styles/Themes.dart';
 import 'package:embark/Styles/Colors.dart';
 import 'package:embark/Styles/Paintings.dart';
 
-final double widthOfThemeString = 150;
-final double widthOfThemeSmall = (50 * (3 / 4));
-final double widthOfThemeLarge = (100 * (3 / 4));
+final double widthOfThemeSmall = (50 * (2 / 3));
+final double widthOfThemeLarge = (100 * (2 / 3));
+final double padding = 10;
 final double totalWidthOfThemes =
-    widthOfThemeSmall * (EmbarkFonts.fonts.length - 1) + widthOfThemeLarge;
+    (widthOfThemeSmall) * (EmbarkColors.fontColors.length - 1) +
+        (widthOfThemeLarge) -
+        30;
+
+typedef OnSaveFont = void Function(String fontFamily);
 
 class FontPicker extends StatefulWidget {
-  double height = 50;
-  double width = 50 * (2 / 3) + 90;
+  double height = (50 * (2 / 3));
+  double width = (50 * (2 / 3));
   bool longPressed = false;
   int fontID;
-  Function onSaved = () {};
+  OnSaveFont onSaved;
 
   FontPicker({this.onSaved, this.fontID = 0});
 
@@ -25,7 +29,7 @@ class FontPicker extends StatefulWidget {
 class _FontPickerState extends State<FontPicker> {
   void _getThemeIDFromDx(BuildContext context, double dx) {
     Size size = MediaQuery.of(context).size;
-    double end = size.width - (15 + 90);
+    double end = size.width - padding;
     double begin;
     for (int i = EmbarkFonts.fonts.length - 1; i >= 0; i--) {
       if (i == widget.fontID) {
@@ -46,41 +50,16 @@ class _FontPickerState extends State<FontPicker> {
     }
   }
 
-  Widget _getFontName() {
-    if (!widget.longPressed) {
-      return Container(
-          width: 75,
-          child: Text("Font",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontFamily: "OpenSans",
-                  fontWeight: FontWeight.w600,
-                  fontSize: 18,
-                  color: EmbarkAlmostBlack)));
-    } else {
-      return Container(
-          width: 150,
-          child: Text(EmbarkFonts.names[widget.fontID],
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontFamily: "OpenSans",
-                  fontWeight: FontWeight.w600,
-                  fontSize: 18,
-                  color: EmbarkAlmostBlack)));
-    }
-  }
-
   _onDragUpdate(BuildContext context, DragUpdateDetails update) {
     RenderBox getBox = context.findRenderObject();
     var local = getBox.globalToLocal(update.globalPosition);
     _getThemeIDFromDx(context, local.dx);
-    //print(local.dx.toString() + "|" + local.dy.toString());
   }
 
   _onDragStart(DragStartDetails start) async {
     setState(() {
-      widget.width = totalWidthOfThemes + widthOfThemeString;
-      widget.height = 100;
+      widget.width = totalWidthOfThemes + padding;
+      widget.height = widthOfThemeLarge + padding * 2;
       widget.longPressed = true;
     });
     //ADDED DELAY
@@ -92,51 +71,51 @@ class _FontPickerState extends State<FontPicker> {
     print(widget.fontID);
 
     return Container(
-        margin: EdgeInsets.only(top: 10),
         child: Align(
             alignment: Alignment.topRight,
             child: Container(
+
                 child: GestureDetector(
                     onHorizontalDragUpdate: (DragUpdateDetails update) =>
                         _onDragUpdate(context, update),
                     onHorizontalDragStart: _onDragStart,
                     onHorizontalDragEnd: (LongPressEndDetails) {
-                      print("drag ended");
                       setState(() {
-                        widget.height = 50;
-                        widget.width = 50 * (2 / 3) + 90;
+                        widget.height = 50 * (2 / 3);
+                        widget.width = 50 * (2 / 3);
                         widget.longPressed = false;
                       });
-                      widget.onSaved(widget.fontID);
+                      widget.onSaved(EmbarkFonts.fonts[widget.fontID]);
                     },
                     child: AnimatedContainer(
+                        alignment: Alignment.centerRight,
                         duration: Duration(milliseconds: 300),
                         height: widget.height,
                         width: widget.width,
-                        child: Material(
-                            color: EmbarkExtraLightGray,
-                            elevation: 1.0,
-                            borderRadius: BorderRadius.all(Radius.circular(50)),
-                            child: Center(
-                                child: SingleChildScrollView(
-                                    scrollDirection: Axis.horizontal,
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: <Widget>[
-                                        _FontPickerPainter(
-                                            longPressed: widget.longPressed,
-                                            height: 50,
-                                            fontID: widget.fontID),
-                                        Container(child: _getFontName())
-                                      ],
-                                    )))))))));
+                        decoration: BoxDecoration(
+                            color: widget.longPressed
+                                ? EmbarkColors.black.withOpacity(0.15)
+                                : Colors.transparent,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(25))),
+                        child: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                _FontPickerPainter(
+                                    longPressed: widget.longPressed,
+                                    height: 50,
+                                    fontID: widget.fontID)
+                              ],
+                            )))))));
   }
 }
 
 class _FontPickerPainter extends StatefulWidget {
   int fontID;
   double height = 0;
-  List<double> heights = List<double>(EmbarkThemes.themes.length);
+  List<double> heights = List<double>(EmbarkColors.fontColors.length);
   bool longPressed = false;
   Function onSaved = () {};
 
@@ -167,7 +146,7 @@ class _ThemePickerPainterState extends State<_FontPickerPainter>
       row.add(AnimatedContainer(
           duration: Duration(milliseconds: 300),
           padding: EdgeInsets.only(bottom: widget.heights[i] / 2),
-          margin: EdgeInsets.only(left: 10),
+          margin: EdgeInsets.only(right: 10),
           height: widget.heights[i] / 2,
           width: widget.heights[i] / 2,
           child: CustomPaint(
@@ -182,13 +161,13 @@ class _ThemePickerPainterState extends State<_FontPickerPainter>
     _setHeights();
     if (!widget.longPressed) {
       return Container(
-          margin: EdgeInsets.only(left: 10),
-          height: widget.height / 2,
-          width: widget.height / 2,
-          child: CustomPaint(
-              foregroundPainter: FontPainter(
-                  fontStyle: EmbarkFonts.fonts[widget.fontID],
-                  yOffset: EmbarkFonts.yOffsets[widget.fontID])));
+              margin: EdgeInsets.only(right:5, top:2),
+              height: widget.height / 2,
+              width: widget.height / 2,
+              child: CustomPaint(
+                  foregroundPainter: FontPainter(
+                      fontStyle: EmbarkFonts.fonts[widget.fontID],
+                      yOffset: EmbarkFonts.yOffsets[widget.fontID])));
     } else {
       return Row(children: _generateFonts());
     }

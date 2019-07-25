@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:embark/Pages/LoginPage/LoginPage.dart';
-import 'package:embark/Pages/ScrapbookPhotoViewPage/ScrapbookPhotoViewPage.dart';
 import 'package:embark/Styles/Colors.dart';
-import 'package:embark/Styles/Themes.dart';
-import 'package:embark/Services/Profile.dart';
 import 'package:catcher/catcher_plugin.dart';
+import 'package:redux/redux.dart';
+import 'Pages/Scrapbook/EditScrapbook/EditScrapbookCover/EditScrapbookCover.dart';
 
 //debug configuration
 CatcherOptions debugOptions =
@@ -23,8 +21,8 @@ CatcherOptions profileOptions = CatcherOptions(
     ToastHandler(
         gravity: ToastHandlerGravity.bottom,
         length: ToastHandlerLength.long,
-        backgroundColor: EmbarkAlmostBlack,
-        textColor: EmbarkExtraLightGray,
+        backgroundColor: EmbarkColors.black,
+        textColor: EmbarkColors.extraLightGray,
         textSize: 12.0,
         customMessage: "Sorry, but an unexpected error occured.")
   ],
@@ -33,22 +31,18 @@ CatcherOptions profileOptions = CatcherOptions(
 
 void main() async {
   // Set default home.
-  Widget _defaultHome = new LoginPage(EmbarkThemes.themes, EmbarkFonts.fonts);
-  // Get result of the login function.
-  bool _result = await profile.setCurrentUser();
-  if (_result) {
-    print("returned true");
-    _defaultHome = new ScrapbookPhotoViewPage();
-  }
-  runApp(MyApp(_defaultHome));
+  //Widget _defaultHome = new LoginPage(EmbarkColors.fontColors, EmbarkFonts.fonts);
+  Widget _defaultHome  = new EditScrapbookView();
+  // Get result of the login function
+  runApp(EmbarkApp(_defaultHome));
 }
 
-class MyApp extends StatelessWidget {
+class EmbarkApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   final Widget _defaultHome;
 
-  MyApp(this._defaultHome);
+  EmbarkApp(this._defaultHome);
 
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -56,16 +50,17 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
               color: Colors.transparent,
               actionsIconTheme: IconThemeData(
-                  color: EmbarkAlmostBlack, size: 36, opacity: 1.0),
+                  color: EmbarkColors.black, size: 36, opacity: 1.0),
               elevation: 0,
               iconTheme: IconThemeData(
-                  color: EmbarkAlmostBlack, size: 36, opacity: 1.0)),
-          backgroundColor: EmbarkExtraLightGray,
+                  color: EmbarkColors.black, size: 36, opacity: 1.0)),
+          backgroundColor: EmbarkColors.extraLightGray,
           brightness: Brightness.light,
-          hintColor: EmbarkLightGray,
-          dialogBackgroundColor: EmbarkAlmostBlack,
-          accentColor: EmbarkAlmostWhite,
-          textSelectionHandleColor: EmbarkAlmostWhite,
+          hintColor: EmbarkColors.lightGray,
+          dialogBackgroundColor: EmbarkColors.black,
+          cursorColor: EmbarkColors.gray,
+          accentColor: EmbarkColors.white,
+          textSelectionHandleColor: EmbarkColors.white,
           fontFamily: "OpenSans"),
       title: 'Flutter Demo',
       home: _defaultHome,

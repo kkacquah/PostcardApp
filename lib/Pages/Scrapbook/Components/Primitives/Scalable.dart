@@ -11,7 +11,7 @@ class Scalable extends StatefulWidget {
   Scalable(
       {this.child,
       this.onTap,
-      this.hitBoxBoundary = 75,
+      this.hitBoxBoundary = 0,
       this.absorbPointer = false,
       this.controller})
       : assert(child != null);
@@ -27,6 +27,8 @@ class _ScalableState extends State<Scalable> {
   Offset _offset;
   double _angle;
 
+
+
   void initState() {
     super.initState();
     _offset = widget.controller.initialOffset;
@@ -40,17 +42,16 @@ class _ScalableState extends State<Scalable> {
   }
 
   Widget renderWithAbsorbedPointer() {
-    Transform.rotate(
+    return Transform.rotate(
         angle: _angle,
         child:
             //background
             GestureDetector(
                 onTap: widget.onTap,
                 onScaleStart: widget.controller.onScaleStart,
-                onScaleEnd: widget.controller.onScaleEnd,
                 onScaleUpdate: widget.controller.onScaleUpdate,
+                onScaleEnd: widget.controller.onScaleEnd,
                 child: Container(
-                    margin: EdgeInsets.all(widget.hitBoxBoundary),
                     child: Container(
                         color: Colors.transparent,
                         child: Container(
@@ -66,10 +67,9 @@ class _ScalableState extends State<Scalable> {
           GestureDetector(
               onTap: widget.onTap,
               onScaleStart: widget.controller.onScaleStart,
-              onScaleEnd: widget.controller.onScaleEnd,
               onScaleUpdate: widget.controller.onScaleUpdate,
+              onScaleEnd: widget.controller.onScaleEnd,
               child: Container(
-                  margin: EdgeInsets.all(widget.hitBoxBoundary),
                   color: Colors.transparent,
                   child: Container(
                     child: widget.child,
@@ -80,17 +80,12 @@ class _ScalableState extends State<Scalable> {
 
   @override
   Widget build(BuildContext context) {
-    if (_offset != null) {
       return Positioned(
           left: _offset.dx,
           top: _offset.dy,
           child: widget.absorbPointer
               ? this.renderWithAbsorbedPointer()
               : this.renderWithUnabsorbedPointer());
-    } else {
-      return widget.absorbPointer
-          ? this.renderWithAbsorbedPointer()
-          : this.renderWithUnabsorbedPointer();
-    }
+
   }
 }

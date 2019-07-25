@@ -1,6 +1,7 @@
 import 'package:embark/Styles/Colors.dart';
 import 'package:flutter/material.dart';
 
+
 class EditScrapbookAppBar extends StatefulWidget with PreferredSizeWidget {
   //Set Using Themes
   EditScrapbookAppBar();
@@ -26,15 +27,17 @@ class _EditScrapbookAppBarState extends State<EditScrapbookAppBar>
 
   Widget build(BuildContext context) {
     //container wraps whole screen
-    return AppBar(actions: <Widget>[
+    return PreferredSize(
+      preferredSize: Size.fromHeight(50),
+    child:AppBar(actions: <Widget>[
       Container(
           padding: EdgeInsets.only(right: 15),
           child: IconButton(
               icon: Icon(
             Icons.more_horiz,
             size: 36,
-            color: EmbarkAlmostBlack,
+            color: EmbarkColors.black,
           )))
-    ]);
+    ]));
   }
 }

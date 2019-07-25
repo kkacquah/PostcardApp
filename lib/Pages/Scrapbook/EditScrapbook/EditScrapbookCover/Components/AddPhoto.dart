@@ -27,7 +27,7 @@ class AddPhoto extends StatelessWidget {
                 child: MaterialButton(
                     padding: EdgeInsets.all(0),
                     elevation: 1.0,
-                    color: EmbarkExtraLightGray,
+                    color: EmbarkColors.extraLightGray,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
                     onPressed: this._handleAddPhoto,
                         child: Center(
@@ -35,7 +35,7 @@ class AddPhoto extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
                             Icon(LineIcons.photo,
-                                size: 25, color: EmbarkAlmostBlack),
+                                size: 25, color: EmbarkColors.black),
                             Container(
                                 child: Container(
                                     width: 82,
@@ -45,7 +45,7 @@ class AddPhoto extends StatelessWidget {
                                             fontFamily: "OpenSans",
                                             fontWeight: FontWeight.w600,
                                             fontSize: 18,
-                                            color: EmbarkAlmostBlack))))
+                                            color: EmbarkColors.black))))
                           ],
                         ))))));
   }

@@ -1,47 +1,51 @@
-import 'package:embark/Pages/Scrapbook/Components/UICoverPageWidget.dart';
-import 'package:embark/Pages/Scrapbook/Components/UIImageWidget.dart';
+import 'package:embark/Pages/Scrapbook/Components/ViewComponents/EditScrapbook.dart';
+import 'package:embark/Pages/Scrapbook/Components/ViewComponents/UICoverTitleWidget.dart';
+import 'package:embark/Pages/Scrapbook/Components/ViewComponents/UIScrapbookCoverPage.dart';
+import 'package:embark/Pages/Scrapbook/Models/ScrapbookComponentMapModel.dart';
+import 'package:embark/Pages/Scrapbook/Models/ScrapbookInfoModel.dart';
+import 'package:embark/Pages/Scrapbook/Models/ScrapbookPageMapModel.dart';
+import 'package:embark/Pages/Scrapbook/Utils/DateUtils.dart';
+import 'package:embark/Pages/Scrapbook/Utils/GeoUtils.dart';
 import 'package:flutter/material.dart';
-import 'package:embark/Pages/Scrapbook/EditScrapbook/Components/AppBar.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:embark/Services/ScrapbookInfo.dart';
 import 'package:embark/Styles/Colors.dart';
 import 'dart:ui';
 import 'dart:io';
 import 'dart:typed_data';
 
-class AddScrapbookCover extends StatefulWidget {
+class EditScrapbookView extends StatelessWidget {
   @override
-  AddScrapbookCover();
-
-  _AddScrapbookCoverState createState() {
-    // TODO: implement createState
-    return _AddScrapbookCoverState();
-  }
-}
-
-class _AddScrapbookCoverState extends State<AddScrapbookCover> {
-  bool previewState = true;
-  final PostcardInfo postcardInfo = PostcardInfo();
-
-  void addPhoto(File image) {
-    this.setState(() {
-      postcardInfo.imageFile = image;
-    });
-  }
-
-  Uint8List loadData(File imageFile) {
-    Uint8List bytes = imageFile.readAsBytesSync();
-    return bytes;
-  }
+  EditScrapbookView();
 
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Scaffold(
-        backgroundColor: EmbarkExtraLightGray,
-        body: UICoverPageWidget(appBar: EditScrapbookAppBar(), componentList: [
-          ImageScrapbookComponent(
-              componentState: ImageScrapbookComponentState())
-        ]));
+    //Create default info model for viewing.
+    ScrapbookInfoModel scrapbookInfoModel = ScrapbookInfoModel();
+    //Create component map model for viewing
+    ScrapbookComponentMapModel scrapbookComponentMapModel =
+        ScrapbookComponentMapModel();
+    //Create key to add to component map model
+    UniqueKey titleKey = UniqueKey();
+    CoverTitleScrapbookComponent coverTitleScrapbookComponent =
+        CoverTitleScrapbookComponent(
+            state: CoverTitleScrapbookComponentState(titleKey,
+                offset: Offset.zero));
+    scrapbookComponentMapModel.addScrapbookComponent(
+        titleKey, coverTitleScrapbookComponent);
+    //Create key to add to page map model
+    UniqueKey pageKey = UniqueKey();
+    //Default UI components for initialization of scrapbook cover page
+    CoverScrapbookPage defaultCoverPage = CoverScrapbookPage(
+        state: CoverScrapbookPageState(pageKey,
+            scrapbookComponentMapModel: scrapbookComponentMapModel));
+    //Create pageMap for edit scrapbook state.
+    //Create edit scrapbook state for ui viewing
+    EditScrapbook editScrapbook = EditScrapbook(
+        state: EditScrapbookState(
+            scrapbookInfoModel: scrapbookInfoModel,
+            scrapbookPageMapModel: ScrapbookPageMapModel(),
+            coverPage: defaultCoverPage));
+
+    return editScrapbook.getUIComponent();
   }
 }

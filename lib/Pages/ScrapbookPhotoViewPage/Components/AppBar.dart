@@ -43,7 +43,7 @@ class _ScrapbookPhotoViewAppbarState extends State<ScrapbookPhotoViewAppbar>
     return PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: AppBar(
-            backgroundColor: EmbarkExtraLightGray,
+            backgroundColor: EmbarkColors.extraLightGray,
             elevation: 0,
             titleSpacing: 0,
             flexibleSpace: Container(
@@ -74,8 +74,8 @@ class _ScrapbookPhotoViewAppbarState extends State<ScrapbookPhotoViewAppbar>
                                           fontSize: 26,
                                           fontWeight: FontWeight.w700,
                                           color: _photoSelected
-                                              ? EmbarkMediumGray
-                                              : EmbarkAlmostBlack),
+                                              ? EmbarkColors.mediumGray
+                                              : EmbarkColors.black),
                                     ))),
                             Container(
                                 padding: EdgeInsets.symmetric(horizontal: 5),
@@ -97,8 +97,8 @@ class _ScrapbookPhotoViewAppbarState extends State<ScrapbookPhotoViewAppbar>
                                           fontSize: 26,
                                           fontWeight: FontWeight.w700,
                                           color: !_photoSelected
-                                              ? EmbarkMediumGray
-                                              : EmbarkAlmostBlack),
+                                              ? EmbarkColors.mediumGray
+                                              : EmbarkColors.black),
                                     )))
                           ]),
                       Flexible(
@@ -107,7 +107,7 @@ class _ScrapbookPhotoViewAppbarState extends State<ScrapbookPhotoViewAppbar>
                               position: this._underlineOffset,
                               child: AnimatedContainer(
                                   duration: Duration(milliseconds: 300),
-                                  color: EmbarkAlmostBlack,
+                                  color: EmbarkColors.black,
                                   height: UNDERLINE_HEIGHT,
                                   width: _photoSelected
                                       ? PHOTOS_SELECTED_WIDTH
@@ -117,7 +117,7 @@ class _ScrapbookPhotoViewAppbarState extends State<ScrapbookPhotoViewAppbar>
         actions: <Widget>[
           Container(
             child:IconButton(
-              icon:Icon(Icons.more_horiz, color: EmbarkAlmostBlack,size: 36)
+              icon:Icon(Icons.more_horiz, color: EmbarkColors.black,size: 36)
             ),
           padding:EdgeInsets.only(right:15))
         ]));

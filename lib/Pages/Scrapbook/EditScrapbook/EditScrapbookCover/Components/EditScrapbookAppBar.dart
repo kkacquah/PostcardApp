@@ -31,11 +31,11 @@ class _EditScrapbookAppBarState extends State<EditScrapbookAppBar>
   Widget build(BuildContext context) {
     //container wraps whole screen
     return AppBar(
-        backgroundColor: EmbarkExtraLightGray,
+        backgroundColor: EmbarkColors.extraLightGray,
         actions: <Widget>[
           Container(
               child:IconButton(
-                  icon:Icon(Icons.more_horiz, color: EmbarkAlmostBlack,size: 36)
+                  icon:Icon(Icons.more_horiz, color: EmbarkColors.black,size: 36)
               ),
               padding:EdgeInsets.only(right:15))
         ]);
