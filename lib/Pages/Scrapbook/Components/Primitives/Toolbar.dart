@@ -6,7 +6,7 @@ import 'dart:ui' as ui;
 
 import 'package:scoped_model/scoped_model.dart';
 
-const double DELETE_WIDGET_RADIUS = 20;
+const double DELETE_WIDGET_RADIUS = 30;
 const double DELETE_WIDGET_RADIUS_FOCUSED = 40;
 const double TOOLBAR_HEIGHT = 100;
 
@@ -54,6 +54,7 @@ class _ToolbarState extends State<CoverToolbar> {
                                         shape: BoxShape.circle,
                                         color: Colors.transparent),
                                     child: Icon(Icons.delete,
+                                        size: 26,
                                         color: EmbarkColors.white)))))))));
   }
 
